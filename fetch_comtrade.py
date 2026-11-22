@@ -7,6 +7,7 @@ example, does not report to Comtrade).
 
 Run:  python fetch_comtrade.py --year 2024
 """
+
 import argparse
 import time
 from pathlib import Path
@@ -19,13 +20,28 @@ REF = "https://comtradeapi.un.org/files/v1/app/reference/Reporters.json"
 
 # HS 6-digit codes for the ore, concentrate or intermediate that leaves the mining country.
 QUERIES = {
-    "li": ("253090,283691,282520", "Spodumene and other mineral concentrates (253090), lithium carbonate (283691), lithium hydroxide (282520)"),
-    "co": ("260500,810520,282200", "Cobalt ores (260500), cobalt mattes and hydroxide intermediates (810520), cobalt oxides and hydroxides (282200)"),
-    "ni": ("260400,750110,750120,720260", "Nickel ores (260400), nickel matte (750110), nickel oxide sinters and MHP (750120), ferronickel and NPI (720260)"),
+    "li": (
+        "253090,283691,282520",
+        "Spodumene and other mineral concentrates (253090), lithium carbonate (283691), "
+        "lithium hydroxide (282520)",
+    ),
+    "co": (
+        "260500,810520,282200",
+        "Cobalt ores (260500), cobalt mattes and hydroxide intermediates (810520), "
+        "cobalt oxides and hydroxides (282200)",
+    ),
+    "ni": (
+        "260400,750110,750120,720260",
+        "Nickel ores (260400), nickel matte (750110), nickel oxide sinters and MHP (750120), "
+        "ferronickel and NPI (720260)",
+    ),
     "c": ("250410,250490", "Natural graphite, powder or flakes (250410) and other (250490)"),
     "mn": ("260200", "Manganese ores and concentrates (260200)"),
     "cu": ("260300,740200", "Copper ores and concentrates (260300), unrefined copper and anodes (740200)"),
-    "ree": ("284610,284690,280530,261220", "Rare-earth compounds (284610, 284690), rare-earth metals (280530), monazite and similar (261220)"),
+    "ree": (
+        "284610,284690,280530,261220",
+        "Rare-earth compounds (284610, 284690), rare-earth metals (280530), monazite and similar (261220)",
+    ),
     "p": ("251010,251020", "Natural calcium phosphates, unground and ground (251010, 251020)"),
 }
 
@@ -68,21 +84,35 @@ def main():
         for partner in MINERS[mat]:
             j = get(API, {"period": args.year, "partnerCode": partner, "cmdCode": cmd, "flowCode": "M"})
             for d in j.get("data", []):
-                if d["reporterCode"] == 0 or d["partner2Code"] != 0 or d["motCode"] != 0 or d["customsCode"] != "C00":
+                if (
+                    d["reporterCode"] == 0
+                    or d["partner2Code"] != 0
+                    or d["motCode"] != 0
+                    or d["customsCode"] != "C00"
+                ):
                     continue
-                rows.append({
-                    "material": mat, "year": args.year, "hs": d["cmdCode"],
-                    "exporter_iso3": iso3.get(partner), "exporter": name.get(partner, partner),
-                    "importer_iso3": iso3.get(d["reporterCode"]), "importer": name.get(d["reporterCode"], d["reporterCode"]),
-                    "tonnes": (d.get("netWgt") or 0) / 1000, "usd": d.get("primaryValue") or 0,
-                })
+                rows.append(
+                    {
+                        "material": mat,
+                        "year": args.year,
+                        "hs": d["cmdCode"],
+                        "exporter_iso3": iso3.get(partner),
+                        "exporter": name.get(partner, partner),
+                        "importer_iso3": iso3.get(d["reporterCode"]),
+                        "importer": name.get(d["reporterCode"], d["reporterCode"]),
+                        "tonnes": (d.get("netWgt") or 0) / 1000,
+                        "usd": d.get("primaryValue") or 0,
+                    }
+                )
             print(f"{mat} from {name.get(partner, partner)}: done")
             time.sleep(1.5)
 
     if not rows:
         raise SystemExit(f"Comtrade returned no flows for {args.year}; {args.out} left unchanged.")
     df = pd.DataFrame(rows)
-    df = df.groupby(["material", "year", "exporter_iso3", "exporter", "importer_iso3", "importer"], as_index=False)[["tonnes", "usd"]].sum()
+    df = df.groupby(
+        ["material", "year", "exporter_iso3", "exporter", "importer_iso3", "importer"], as_index=False
+    )[["tonnes", "usd"]].sum()
     df.to_csv(args.out, index=False)
     print(f"Saved {len(df)} routes to {args.out}")
 

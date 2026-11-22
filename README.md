@@ -14,7 +14,7 @@ Python keeps the page in step with the CSV files in `data/`. You need Python 3.1
 
 ```bash
 # only when USGS publishes a new edition (download the PDF from pubs.usgs.gov/periodicals/mcs2025/mcs2025.pdf)
-python extract_usgs.py path/to/mcs2025.pdf   # writes data/usgs_world.csv, usgs_commodities.csv, usgs_skipped.csv
+python extract_usgs.py path/to/mcs2025.pdf   # writes data/usgs_world.csv and usgs_commodities.csv
 
 # optional: refresh the trade routes from UN Comtrade (about 5-10 minutes, no key needed)
 python fetch_comtrade.py --year 2024
@@ -22,6 +22,8 @@ python fetch_comtrade.py --year 2024
 # copy all the data into the page and rebuild the standalone copy
 python build.py
 ```
+
+The Python code is formatted with [black](https://black.readthedocs.io) and checked with [ruff](https://docs.astral.sh/ruff/); both read their settings from `pyproject.toml`.
 
 `build.py` replaces only the generated blocks in the HTML (marked `DATA:START` and `TRADE:START`). Layout, styling, behaviour and the text at the bottom of the page are edited by hand in `battery-minerals-atlas.html` and are never overwritten.
 
@@ -39,7 +41,6 @@ python build.py
 | `data/energy_uses.csv` | The text explaining how each material is used in each technology |
 | `data/usgs_world.csv` | Production and reserves by country, in tonnes unless the material uses another unit |
 | `data/usgs_commodities.csv` | World totals, units and the USGS table each material came from |
-| `data/usgs_skipped.csv` | Commodities USGS publishes no country figures for |
 | `data/materials.csv`, `refining.csv`, `home_refining.csv` | Names, refining shares and home-refining countries for the eight battery materials |
 | `data/trade_flows.csv` | Trade routes for the eight battery materials: tonnes and US dollars |
 | `data/countries.csv` | A map anchor point (latitude, longitude) for each country |

@@ -16,6 +16,7 @@ Inputs (all in data/):
     commodity_meta.csv, energy_uses.csv    hand-edited names, categories, relevance scores and uses
     materials.csv, refining.csv, home_refining.csv, trade_flows.csv, countries.csv
 """
+
 import json
 import math
 import re
@@ -40,36 +41,113 @@ MIN_ROUTE_SHARE = 0.01  # hide trade routes under 1% of a country's exports of t
 
 # countries.csv uses common names; the map outlines use Natural Earth names. Only the differences are listed.
 NE_NAME = {
-    "COD": "Dem. Rep. Congo", "USA": "United States of America", "DOM": "Dominican Rep.",
-    "CAF": "Central African Rep.", "GNQ": "Eq. Guinea", "SWZ": "eSwatini", "SLB": "Solomon Is.",
-    "BIH": "Bosnia and Herz.", "MKD": "Macedonia", "SSD": "S. Sudan", "ESH": "W. Sahara",
-    "FLK": "Falkland Is.", "ATF": "Fr. S. Antarctic Lands",
+    "COD": "Dem. Rep. Congo",
+    "USA": "United States of America",
+    "DOM": "Dominican Rep.",
+    "CAF": "Central African Rep.",
+    "GNQ": "Eq. Guinea",
+    "SWZ": "eSwatini",
+    "SLB": "Solomon Is.",
+    "BIH": "Bosnia and Herz.",
+    "MKD": "Macedonia",
+    "SSD": "S. Sudan",
+    "ESH": "W. Sahara",
+    "FLK": "Falkland Is.",
+    "ATF": "Fr. S. Antarctic Lands",
 }
 
 # Energy uses, in the order of the score columns in commodity_meta.csv (and of APPS in the page).
 APP_COLS = ["battery", "solar", "wind", "grid", "nuclear", "hydrogen"]
 # A material's colour comes from its strongest use. Keep in step with APP_COLOR in the page's script.
-APP_COLOR = {"battery": "#d1455f", "solar": "#c98a00", "wind": "#2f7fc1", "grid": "#bf6a2a",
-             "nuclear": "#7d3fa8", "hydrogen": "#0f8a8a", "none": "#6b7570"}
+APP_COLOR = {
+    "battery": "#d1455f",
+    "solar": "#c98a00",
+    "wind": "#2f7fc1",
+    "grid": "#bf6a2a",
+    "nuclear": "#7d3fa8",
+    "hydrogen": "#0f8a8a",
+    "none": "#6b7570",
+}
 # The eight battery materials have hand-set colours in the page's CSS, plus refining and trade data.
 ORIGINAL = {"li", "co", "ni", "c", "mn", "cu", "ree", "p"}
 
-ATOMIC = {"He": 2, "Li": 3, "Be": 4, "B": 5, "C": 6, "Mg": 12, "Al": 13, "Si": 14, "P": 15, "S": 16, "K": 19,
-          "Ti": 22, "V": 23, "Cr": 24, "Mn": 25, "Fe": 26, "Co": 27, "Ni": 28, "Cu": 29, "Zn": 30, "Ga": 31,
-          "As": 33, "Se": 34, "Br": 35, "Sr": 38, "Zr": 40, "Nb": 41, "Mo": 42, "Pd": 46, "Ag": 47, "Cd": 48,
-          "In": 49, "Sn": 50, "Sb": 51, "Te": 52, "I": 53, "Ta": 73, "W": 74, "Re": 75, "Pt": 78, "Au": 79,
-          "Hg": 80, "Bi": 83}
+ATOMIC = {
+    "He": 2,
+    "Li": 3,
+    "Be": 4,
+    "B": 5,
+    "C": 6,
+    "Mg": 12,
+    "Al": 13,
+    "Si": 14,
+    "P": 15,
+    "S": 16,
+    "K": 19,
+    "Ti": 22,
+    "V": 23,
+    "Cr": 24,
+    "Mn": 25,
+    "Fe": 26,
+    "Co": 27,
+    "Ni": 28,
+    "Cu": 29,
+    "Zn": 30,
+    "Ga": 31,
+    "As": 33,
+    "Se": 34,
+    "Br": 35,
+    "Sr": 38,
+    "Zr": 40,
+    "Nb": 41,
+    "Mo": 42,
+    "Pd": 46,
+    "Ag": 47,
+    "Cd": 48,
+    "In": 49,
+    "Sn": 50,
+    "Sb": 51,
+    "Te": 52,
+    "I": 53,
+    "Ta": 73,
+    "W": 74,
+    "Re": 75,
+    "Pt": 78,
+    "Au": 79,
+    "Hg": 80,
+    "Bi": 83,
+}
 
 # Rough tonnes per unit, used only to order the tiles by size of production.
 TONNES_PER_UNIT = {"t": 1, "carats": 0.0002, "m³": 0.000179}
 
 # What the USGS production figure measures, keyed by a word in the title of its table.
-KIND = {"Mine": "mine production", "Refinery": "refinery production", "Smelter": "smelter production",
-        "Sponge": "sponge production", "Alumina": "mine production"}
+KIND = {
+    "Mine": "mine production",
+    "Refinery": "refinery production",
+    "Smelter": "smelter production",
+    "Sponge": "sponge production",
+    "Alumina": "mine production",
+}
 
-# Fields every material must have; the build stops if one is missing (a typo here once blanked the reserves view).
-REQUIRED = ["key", "sym", "name", "cat", "kind", "unit", "bu", "color", "apps", "uses",
-            "prodWorld", "prodT", "resWorld", "prod", "res", "ref"]
+# Fields every material must have; the build stops if one is missing.
+REQUIRED = [
+    "key",
+    "sym",
+    "name",
+    "cat",
+    "kind",
+    "unit",
+    "bu",
+    "color",
+    "apps",
+    "uses",
+    "prodWorld",
+    "prodT",
+    "resWorld",
+    "prod",
+    "res",
+    "ref",
+]
 
 
 def read(name):
@@ -106,7 +184,9 @@ def replace_block(html, marker, block):
     """Swap the text between // MARKER:START and // MARKER:END for block (which includes the markers)."""
     new, n = re.subn(rf"// {marker}:START.*?// {marker}:END", lambda _: block, html, flags=re.S)
     if n != 1:
-        raise SystemExit(f"Expected one // {marker}:START ... // {marker}:END block in {PAGE.name}, found {n}.")
+        raise SystemExit(
+            f"Expected one // {marker}:START ... // {marker}:END block in {PAGE.name}, found {n}."
+        )
     return new
 
 
@@ -141,18 +221,29 @@ def materials_block(outlines, name_of):
 
         item = {
             "key": r.key,
-            "z": "57–71" if r.key == "ree" else (ATOMIC.get(r.symbol) if r.category != "Other" else None),  # pure elements only
-            "sym": r.symbol, "name": r.name, "cat": r.category, "kind": kind_of(c.table),
-            "unit": o.unit if o is not None else js_unit(c.unit), "bu": c.base_unit,
+            "z": (
+                "57–71" if r.key == "ree" else (ATOMIC.get(r.symbol) if r.category != "Other" else None)
+            ),  # pure elements only
+            "sym": r.symbol,
+            "name": r.name,
+            "cat": r.category,
+            "kind": kind_of(c.table),
+            "unit": o.unit if o is not None else js_unit(c.unit),
+            "bu": c.base_unit,
             "role": (o.battery_role if o is not None else r.role) or "",
             "color": f"var(--{r.key})" if r.key in ORIGINAL else APP_COLOR[top],
-            "apps": scores, "uses": uses.get(r.key, {}),
+            "apps": scores,
+            "uses": uses.get(r.key, {}),
             "prodWorld": prod_world,
             "prodT": prod_world * TONNES_PER_UNIT.get(c.base_unit, 1),
             "resWorld": res_world if len(res) else 0,
             "prod": {k: float(v) for k, v in prod.items()},
             "res": {k: float(v) for k, v in res.items()},
-            "ref": [] if ref is None else [[name_of.get(x.iso3, x.country), int(x.share_pct)] for x in ref.itertuples()],
+            "ref": (
+                []
+                if ref is None
+                else [[name_of.get(x.iso3, x.country), int(x.share_pct)] for x in ref.itertuples()]
+            ),
             "refWhat": o.refining_product if o is not None else "",
             "refSrc": o.refining_source if o is not None else "",
         }
@@ -163,8 +254,10 @@ def materials_block(outlines, name_of):
 
     items.sort(key=lambda i: (-sum(i["apps"]), i["name"]))
     body = ",\n".join(" " + json.dumps(i, ensure_ascii=False, separators=(",", ":")) for i in items)
-    block = ("// DATA:START (generated by build.py from data/*.csv, do not edit by hand)\n"
-             "const MATERIALS = [\n" + body + "\n];\n// DATA:END")
+    block = (
+        "// DATA:START (generated by build.py from data/*.csv, do not edit by hand)\n"
+        "const MATERIALS = [\n" + body + "\n];\n// DATA:END"
+    )
     return block, unmatched, len(items)
 
 
@@ -180,7 +273,10 @@ def check(item):
 
 
 def trade_block(name_of, countries):
-    """JS for the trade routes. Returns (block, names used by routes, ISO3 codes missing from countries.csv)."""
+    """JS for the trade routes.
+
+    Returns (block, routes by material, country names used by routes, ISO3 codes missing from countries.csv).
+    """
     trade = read("trade_flows.csv")
     trade = trade[trade.exporter_iso3 != trade.importer_iso3].copy()
     trade["share"] = trade.usd / trade.groupby(["material", "exporter_iso3"]).usd.transform("sum")
@@ -202,8 +298,10 @@ def trade_block(name_of, countries):
             rows.append([a, b, int(r.tonnes), int(r.usd), round(float(r.share), 4)])
         routes[key] = rows
 
-    home = {k: [name_of.get(i, n) for i, n in zip(g.iso3, g.country)]
-            for k, g in read("home_refining.csv").groupby("material")}
+    home = {
+        k: [name_of.get(i, n) for i, n in zip(g.iso3, g.country, strict=True)]
+        for k, g in read("home_refining.csv").groupby("material")
+    }
 
     def js(obj):
         return json.dumps(obj, ensure_ascii=False, separators=(",", ":"))
@@ -232,8 +330,10 @@ def build_page():
     html = replace_block(html, "TRADE", tblock)
     PAGE.write_text(html, encoding="utf-8", newline="\n")
 
-    print(f"Wrote {n_materials} materials and {sum(map(len, routes.values()))} trade routes "
-          f"for {len(routes)} materials into {PAGE.name}.")
+    print(
+        f"Wrote {n_materials} materials and {sum(map(len, routes.values()))} trade routes "
+        f"for {len(routes)} materials into {PAGE.name}."
+    )
     if unmatched:
         print("  listed but not shaded (no outline on the map):", ", ".join(sorted(unmatched)))
     if used - outlines:

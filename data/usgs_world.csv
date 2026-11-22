@@ -62,25 +62,6 @@ Bauxite,Russia,6300.0,480000.0
 Bauxite,Saudi Arabia,5800.0,180000.0
 Bauxite,Turkey,3200.0,69000.0
 Bauxite,Vietnam,4200.0,3100000.0
-Alumina,United States of America,720.0,
-Alumina,Australia,18000.0,
-Alumina,Brazil,11000.0,
-Alumina,Canada,1500.0,
-Alumina,China,84000.0,
-Alumina,Germany,960.0,
-Alumina,Greece,860.0,
-Alumina,Guinea,300.0,
-Alumina,India,7600.0,
-Alumina,Indonesia,1300.0,
-Alumina,Ireland,1600.0,
-Alumina,Jamaica,1500.0,
-Alumina,Kazakhstan,1400.0,
-Alumina,Russia,2900.0,
-Alumina,Saudi Arabia,1800.0,
-Alumina,Spain,820.0,
-Alumina,Turkey,320.0,
-Alumina,United Arab Emirates,2400.0,
-Alumina,Vietnam,1500.0,
 Beryllium,United States of America,180.0,
 Beryllium,Brazil,80.0,
 Beryllium,China,77.0,
@@ -127,20 +108,6 @@ Cadmium,Peru,620.0,
 Cadmium,Poland,250.0,
 Cadmium,Russia,800.0,
 Cadmium,Uzbekistan,200.0,
-Cement,United States of America,86000000.0,
-Cement,Brazil,68000000.0,
-Cement,China,1900000000.0,
-Cement,Egypt,50000000.0,
-Cement,India,450000000.0,
-Cement,Indonesia,65000000.0,
-Cement,Iran,72000000.0,
-Cement,Japan,46000000.0,
-Cement,South Korea,52000000.0,
-Cement,Mexico,48000000.0,
-Cement,Russia,65000000.0,
-Cement,Saudi Arabia,50000000.0,
-Cement,Turkey,82000000.0,
-Cement,Vietnam,110000000.0,
 Chromium,United States of America,,630000.0
 Chromium,Brazil,1400000.0,6600000.0
 Chromium,Finland,1900000.0,8300000.0
@@ -337,38 +304,6 @@ Iodine,Iran,700.0,40000.0
 Iodine,Japan,9300.0,4900000.0
 Iodine,Russia,3.0,120000.0
 Iodine,Turkmenistan,770.0,70000.0
-Pig Iron,United States of America,22000000.0,
-Pig Iron,Brazil,27000000.0,
-Pig Iron,Canada,6000000.0,
-Pig Iron,China,840000000.0,
-Pig Iron,Germany,23000000.0,
-Pig Iron,India,93000000.0,
-Pig Iron,Iran,4000000.0,
-Pig Iron,Italy,3000000.0,
-Pig Iron,Japan,62000000.0,
-Pig Iron,South Korea,44000000.0,
-Pig Iron,Mexico,1000000.0,
-Pig Iron,Russia,54000000.0,
-Pig Iron,Taiwan,12000000.0,
-Pig Iron,Turkey,8000000.0,
-Pig Iron,Ukraine,6000000.0,
-Pig Iron,Vietnam,13000000.0,
-Raw Steel,United States of America,81000000.0,
-Raw Steel,Brazil,34000000.0,
-Raw Steel,Canada,12000000.0,
-Raw Steel,China,990000000.0,
-Raw Steel,Germany,35000000.0,
-Raw Steel,India,150000000.0,
-Raw Steel,Iran,33000000.0,
-Raw Steel,Italy,21000000.0,
-Raw Steel,Japan,85000000.0,
-Raw Steel,South Korea,64000000.0,
-Raw Steel,Mexico,16000000.0,
-Raw Steel,Russia,75000000.0,
-Raw Steel,Taiwan,19000000.0,
-Raw Steel,Turkey,32000000.0,
-Raw Steel,Ukraine,6000000.0,
-Raw Steel,Vietnam,19000000.0,
 Iron Ore,United States of America,48000000.0,3600000000.0
 Iron Ore,Australia,930000000.0,58000000000.0
 Iron Ore,Brazil,440000000.0,34000000000.0
@@ -386,13 +321,6 @@ Iron Ore,South Africa,66000000.0,930000000.0
 Iron Ore,Sweden,28000000.0,1300000000.0
 Iron Ore,Turkey,18000000.0,150000000.0
 Iron Ore,Ukraine,42000000.0,6500000000.0
-Iron Oxide Pigments,Cyprus,20000.0,
-Iron Oxide Pigments,France,17000.0,
-Iron Oxide Pigments,Germany,250000.0,
-Iron Oxide Pigments,India,3300000.0,37000000.0
-Iron Oxide Pigments,Italy,31000.0,
-Iron Oxide Pigments,Pakistan,100000.0,
-Iron Oxide Pigments,Spain,17000.0,
 Kyanite And Related Minerals,United States of America,80000.0,
 Kyanite And Related Minerals,China,100000.0,5000000.0
 Kyanite And Related Minerals,France,60000.0,
@@ -411,28 +339,6 @@ Lead,Russia,220000.0,8900000.0
 Lead,Sweden,70000.0,1700000.0
 Lead,Tajikistan,40000.0,
 Lead,Turkey,70000.0,1600000.0
-Lime,United States of America,16000000.0,
-Lime,Australia,2000000.0,
-Lime,Belgium,1000000.0,
-Lime,Brazil,8100000.0,
-Lime,Bulgaria,1300000.0,
-Lime,Canada,1900000.0,
-Lime,China,310000000.0,
-Lime,France,3500000.0,
-Lime,Germany,5700000.0,
-Lime,India,17000000.0,
-Lime,Iran,4000000.0,
-Lime,Italy,2400000.0,
-Lime,Japan,6000000.0,
-Lime,South Korea,5100000.0,
-Lime,Malaysia,1500000.0,
-Lime,Poland,1300000.0,
-Lime,Russia,11000000.0,
-Lime,South Africa,1100000.0,
-Lime,Spain,1700000.0,
-Lime,Turkey,4100000.0,
-Lime,Ukraine,1000000.0,
-Lime,United Kingdom,1400000.0,
 Lithium,United States of America,,1800000.0
 Lithium,Argentina,18000.0,4000000.0
 Lithium,Australia,88000.0,7000000.0
@@ -519,28 +425,6 @@ Niobium (Columbium),Canada,7100.0,1600000.0
 Niobium (Columbium),Congo,700.0,
 Niobium (Columbium),Russia,350.0,
 Niobium (Columbium),Rwanda,200.0,
-Nitrogen (Fixed)—Ammonia,United States of America,14000000.0,
-Nitrogen (Fixed)—Ammonia,Algeria,2000000.0,
-Nitrogen (Fixed)—Ammonia,Australia,1300000.0,
-Nitrogen (Fixed)—Ammonia,Canada,3600000.0,
-Nitrogen (Fixed)—Ammonia,China,47000000.0,
-Nitrogen (Fixed)—Ammonia,Egypt,5000000.0,
-Nitrogen (Fixed)—Ammonia,Germany,1700000.0,
-Nitrogen (Fixed)—Ammonia,India,15000000.0,
-Nitrogen (Fixed)—Ammonia,Indonesia,6000000.0,
-Nitrogen (Fixed)—Ammonia,Iran,4200000.0,
-Nitrogen (Fixed)—Ammonia,Malaysia,1400000.0,
-Nitrogen (Fixed)—Ammonia,Netherlands,2000000.0,
-Nitrogen (Fixed)—Ammonia,Nigeria,1700000.0,
-Nitrogen (Fixed)—Ammonia,Oman,2000000.0,
-Nitrogen (Fixed)—Ammonia,Pakistan,3500000.0,
-Nitrogen (Fixed)—Ammonia,Poland,1600000.0,
-Nitrogen (Fixed)—Ammonia,Qatar,3100000.0,
-Nitrogen (Fixed)—Ammonia,Russia,14000000.0,
-Nitrogen (Fixed)—Ammonia,Saudi Arabia,5400000.0,
-Nitrogen (Fixed)—Ammonia,Trinidad and Tobago,3200000.0,
-Nitrogen (Fixed)—Ammonia,Uzbekistan,1300000.0,
-Nitrogen (Fixed)—Ammonia,Vietnam,1400000.0,
 Peat,United States of America,350000.0,150000000.0
 Peat,Belarus,2200000.0,2600000000.0
 Peat,Canada,3000000.0,720000000.0
@@ -710,20 +594,6 @@ Selenium,South Africa,9.0,
 Selenium,Sweden,,500.0
 Selenium,Turkey,50.0,
 Selenium,Uzbekistan,2.0,
-Ferrosilicon,Bhutan,80000.0,
-Ferrosilicon,Brazil,200000.0,
-Ferrosilicon,Canada,20000.0,
-Ferrosilicon,China,3500000.0,
-Ferrosilicon,France,20000.0,
-Ferrosilicon,Iceland,70000.0,
-Ferrosilicon,India,60000.0,
-Ferrosilicon,Kazakhstan,130000.0,
-Ferrosilicon,Malaysia,130000.0,
-Ferrosilicon,Norway,180000.0,
-Ferrosilicon,Poland,30000.0,
-Ferrosilicon,Russia,470000.0,
-Ferrosilicon,South Africa,40000.0,
-Ferrosilicon,Spain,40000.0,
 Silicon Metal,Australia,40000.0,
 Silicon Metal,Brazil,190000.0,
 Silicon Metal,Canada,30000.0,
@@ -750,11 +620,6 @@ Silver,Peru,3100.0,140000.0
 Silver,Poland,1300.0,61000.0
 Silver,Russia,1200.0,92000.0
 Silver,Sweden,400.0,
-Soda Ash,United States of America,12000000.0,23000000000.0
-Soda Ash,Botswana,270000.0,16000000.0
-Soda Ash,Ethiopia,20000.0,400000000.0
-Soda Ash,Kenya,300000.0,7000000.0
-Soda Ash,Turkey,11000000.0,840000000.0
 Strontium,Argentina,700.0,
 Strontium,China,80000.0,12000000.0
 Strontium,Iran,200000.0,7100000.0

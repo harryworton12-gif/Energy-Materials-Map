@@ -4,9 +4,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta charset="utf-8">
 <title>Energy Minerals Atlas</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Where the minerals behind clean energy are produced: mine production, reserves, refining and trade by country, from USGS data.">
 <style>
-/* Layout: periodic-table material picker over a wide map, ranked ledger to the right; stacks on phones. */
+/* Layout: material picker above a wide map, with the country ranking and refining cards to the right.
+   Everything stacks into one column on narrow screens. */
 :root{
   --bg:#f3f4f1; --surface:#ffffff; --ink:#18201f; --muted:#5d6764; --line:#d9ddd8; --empty:#e4e7e2; --land-stroke:#ffffff;
   --li:#c2304a; --co:#2552c4; --ni:#2f8a5a; --c:#3d4650; --mn:#7d3fa8; --cu:#bf6a2a; --ree:#0f8a8a; --p:#8a7a12;
@@ -137,8 +138,6 @@ aside{display:grid;gap:16px;min-width:0}
 </style>
 </head>
 <body>
-
-
 <div class="wrap">
   <header>
     <span class="eyebrow">Energy transition minerals · mine to refinery</span>
@@ -210,16 +209,17 @@ aside{display:grid;gap:16px;min-width:0}
     <h3>Which minerals matter for which technology</h3>
     <p class="sub">Click a material to open it, or a technology to filter the picker. Dots show how much the technology depends on the mineral:
       <span class="cell s1 inline"></span> minor <span class="cell s2 inline"></span> important <span class="cell s3 inline"></span> critical.
-      These ratings are an editorial summary, not USGS data. 
+      These ratings are an editorial summary, not USGS data.</p>
     <div class="matrixwrap"><table class="matrix" id="matrix"></table></div>
   </section>
 
   <section class="sources" aria-label="Sources">
     <h3>Sources and notes</h3>
     <p><b>Mining and reserves:</b> U.S. Geological Survey, <a href="https://pubs.usgs.gov/publication/mcs2025" target="_blank" rel="noopener">Mineral Commodity Summaries 2025</a>. Production is the 2024 estimate; reserves are as reported in that edition. Lithium, cobalt, nickel, manganese and copper are tonnes of contained metal; graphite is natural graphite; rare earths are tonnes of rare-earth-oxide equivalent; phosphate is tonnes of phosphate rock. "W" figures withheld by USGS (for example US lithium) are not shown. Shares are of the USGS world total, which includes countries not itemised.</p>
-    <p><b>Refining:</b> International Energy Agency, <a href="https://www.iea.org/reports/global-critical-minerals-outlook-2024" target="_blank" rel="noopener">Global Critical Minerals Outlook 2024</a>, shares of refined output in 2023, rounded and approximate; copper refining uses USGS 2024 refinery production. They show how concentrated processing is, not exact tonnages.</p><p>US lithium production is withheld by USGS, and Australian reserves are USGS totals (JORC-compliant reserves are lower).</p>
+    <p><b>Refining:</b> International Energy Agency, <a href="https://www.iea.org/reports/global-critical-minerals-outlook-2024" target="_blank" rel="noopener">Global Critical Minerals Outlook 2024</a>, shares of refined output in 2023, rounded and approximate; copper refining uses USGS 2024 refinery production. They show how concentrated processing is, not exact tonnages.</p>
+    <p>US lithium production is withheld by USGS, and Australian reserves are USGS totals (JORC-compliant reserves are lower).</p>
     <p><b>Coverage:</b> every commodity in the USGS Mineral Commodity Summaries 2025 that has a country-by-country table. Cesium, germanium, rubidium, scandium, thallium, thorium and yttrium (and a few bulk materials) are left out because USGS publishes no country figures for them. Most 2024 figures are USGS estimates. Where USGS gives a figure only as a range, text or "withheld", the country is not shaded. Reserves are shown only where USGS publishes them. For some minerals the world total is for a product form (for example gross weight, or refinery rather than mine output), so check the unit under the world total.</p>
-    <p><b>Energy relevance:</b> the dots in the matrix are an editorial summary of where each mineral is a significant input to a technology (see the IEA Global Critical Minerals Outlook and the US DOE critical materials assessments). 
+    <p><b>Energy relevance:</b> the dots in the matrix are an editorial summary of where each mineral is a significant input to a technology (see the IEA Global Critical Minerals Outlook and the US DOE critical materials assessments).</p>
     <p>Trade routes and refining shares are only available for lithium, cobalt, nickel, graphite, manganese, copper, rare earths and phosphate.</p>
   </section>
 </div>
@@ -492,7 +492,7 @@ function renderUseNote() {
   if (!mat || ai < 0) { box.property("hidden", true); return; }
   const lvl = ["", "minor", "important", "critical"][mat.apps[ai]];
   box.property("hidden", false).style("--c", APP_COLOR[openUse])
-    .html(`<b>${mat.name} in ${APPS[ai].label.toLowerCase()}</b><span class="lvl">${lvl} use</span><p>${mat.uses[openUse] || "No description yet. Add one in data/energy_uses.csv."}</p>`);
+    .html(`<b>${mat.name} in ${APPS[ai].label.toLowerCase()}</b><span class="lvl">${lvl} use</span><p>${mat.uses[openUse] || "No description yet."}</p>`);
 }
 
 // Nothing selected: an unshaded map, with the country profile still available.

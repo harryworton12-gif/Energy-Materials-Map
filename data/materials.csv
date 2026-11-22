@@ -1,9 +1,9 @@
-key,name,symbol,unit,battery_role,world_production_t,world_reserves_t,refining_product,refining_source,verified
-li,Lithium,Li,tonnes of lithium content,Cathode and electrolyte,240000,30000000,Lithium chemicals,"IEA, 2023",yes
-co,Cobalt,Co,tonnes of cobalt content,NMC and NCA cathodes,290000,11000000,Refined cobalt,"IEA, 2023",no
-ni,Nickel,Ni,tonnes of nickel content,High-energy cathodes,3700000,130000000,Refined nickel,"IEA, 2023",yes
-c,Graphite,C,tonnes of natural graphite,Anode,1600000,290000000,Battery-grade spherical graphite,"IEA, 2023",yes
-mn,Manganese,Mn,tonnes of manganese content,"LMFP, NMC and LMO cathodes",20000000,1700000000,High-purity manganese sulphate,"IEA, 2023",yes
-cu,Copper,Cu,tonnes of copper content,Current collectors and wiring,23000000,980000000,Refined copper,"USGS, 2024",yes
-ree,Rare earths,REE,tonnes of rare-earth oxide equivalent,EV motor magnets,390000,90000000,Separated rare-earth oxides,"IEA, 2023",yes
-p,Phosphate,P,tonnes of marketable phosphate rock,LFP cathodes,240000000,74000000000,LFP cathode material (phosphate has no refining split),"IEA, 2023",yes
+key,unit,battery_role,refining_product,refining_source
+li,tonnes of lithium content,Cathode and electrolyte,Lithium chemicals,"IEA, 2023"
+co,tonnes of cobalt content,NMC and NCA cathodes,Refined cobalt,"IEA, 2023"
+ni,tonnes of nickel content,High-energy cathodes,Refined nickel,"IEA, 2023"
+c,tonnes of natural graphite,Anode,Battery-grade spherical graphite,"IEA, 2023"
+mn,tonnes of manganese content,"LMFP, NMC and LMO cathodes",High-purity manganese sulphate,"IEA, 2023"
+cu,tonnes of copper content,Current collectors and wiring,Refined copper,"USGS, 2024"
+ree,tonnes of rare-earth oxide equivalent,EV motor magnets,Separated rare-earth oxides,"IEA, 2023"
+p,tonnes of marketable phosphate rock,LFP cathodes,LFP cathode material (phosphate has no refining split),"IEA, 2023"

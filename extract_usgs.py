@@ -1,17 +1,21 @@
-"""Extract world mine production and reserves for every commodity from the USGS Mineral Commodity Summaries 2025 PDF.
+"""Extract world production and reserves by country from the USGS Mineral Commodity Summaries PDF.
 
 Run with:  python extract_usgs.py path/to/mcs2025.pdf
 Download the PDF from https://pubs.usgs.gov/periodicals/mcs2025/mcs2025.pdf (public domain).
 
-Writes, in data/:
+Writes, in data/, for the commodities listed in commodity_meta.csv:
     usgs_world.csv         one row per commodity and country: 2024 production and reserves
     usgs_commodities.csv   one row per commodity: unit, source table, world totals, and how the
                            listed countries compare with USGS's own world total (a parsing check)
-    usgs_skipped.csv       chapters with no usable country table, and why
+
+Commodities it finds but that commodity_meta.csv doesn't list, and chapters with no usable
+country table, are reported on screen instead. To add a commodity, add a row to
+commodity_meta.csv and run this again.
 
 Footnote markers and the "e" (estimated) flag are printed in a smaller font than the numbers, so
 they are dropped by font size instead of being glued onto the figures.
 """
+
 import argparse
 import functools
 import re
@@ -52,7 +56,7 @@ def page_lines(page):
     for row in rows:
         row.sort(key=lambda c: c[1])
         toks, end = [], None
-        for y, x, fs, t in row:
+        for _y, x, fs, t in row:
             t = t.replace("\ufffd", "—")
             # numbers arrive in fragments ("2,0" + "00"); words arrive whole
             if toks and re.search(r"[\d,.]$", toks[-1]) and re.match(r"^[\d,.]", t) and x - end < 0.3 * fs:
@@ -97,30 +101,34 @@ def read_chapters(pdf):
     for idx, line in enumerate(joined):
         if idx > 0 and re.match(r"^[\(\[]Data in", line):  # the unit line under each chapter title
             k = idx - 1
-            while k > 0 and joined[k].startswith("("):     # skip a descriptor line between title and unit
+            while k > 0 and joined[k].startswith("("):  # skip a descriptor line between title and unit
                 k -= 1
             starts.append((idx, re.sub(r"\d+$", "", joined[k].strip()), line.strip("()[] ")))
     ends = [s[0] for s in starts[1:]] + [len(stream)]
-    return [{"name": name, "unit": unit, "toks": stream[start:end]}
-            for (start, name, unit), end in zip(starts, ends)]
+    return [
+        {"name": name, "unit": unit, "toks": stream[start:end]}
+        for (start, name, unit), end in zip(starts, ends, strict=True)
+    ]
 
 
 def parse_table(toks):
     """The world table of one chapter: (table title, country rows, world-total values)."""
     lines = [" ".join(t) for t in toks]
-    s = next((i for i, l in enumerate(lines) if TABLE_START.match(l)), None)
+    s = next((i for i, line in enumerate(lines) if TABLE_START.match(line)), None)
     if s is None:
         return "", [], []
     title = lines[s].split(":")[0]
     pending, got = "", []
-    for l, t in zip(lines[s + 1:], toks[s + 1:]):
-        if l.startswith(("World Resources", "Substitutes", "eEstimated")):
+    for line, t in zip(lines[s + 1 :], toks[s + 1 :], strict=True):
+        if line.startswith(("World Resources", "Substitutes", "eEstimated")):
             break
         name, vals = split_row(t)
         if not vals:
             # a country name wrapped onto two lines, or prose; keep short lines only
-            if len(l) < 40 and not l.startswith(("Mine", "Reserves", "Capacity", "U.S. Geological", "Refinery", "Smelter")):
-                pending += (" " if pending else "") + l
+            if len(line) < 40 and not line.startswith(
+                ("Mine", "Reserves", "Capacity", "U.S. Geological", "Refinery", "Smelter")
+            ):
+                pending += (" " if pending else "") + line
             continue
         if not name:
             continue
@@ -137,8 +145,17 @@ def main(pdf):
     meta = []
     for ch in read_chapters(pdf):
         title, got, world = parse_table(ch["toks"])
-        meta.append({"commodity": ch["name"].title(), "unit": ch["unit"], "table": title, "n_rows": len(got),
-                     "ncols": max((len(r["vals"]) for r in got), default=0), "world": world, "got": got})
+        meta.append(
+            {
+                "commodity": ch["name"].title(),
+                "unit": ch["unit"],
+                "table": title,
+                "n_rows": len(got),
+                "ncols": max((len(r["vals"]) for r in got), default=0),
+                "world": world,
+                "got": got,
+            }
+        )
     write_outputs(meta)
 
 
@@ -163,22 +180,59 @@ SPECS = {
 }
 # some tables say in their own header that a column is in thousand tons although the chapter says tons
 UNIT_FIX = {"Zirconium And Hafnium": (1000, 1000), "Molybdenum": (1, 1000), "Vanadium": (1, 1000)}
-SKIP = {"Gemstones": "published as a dollar value, not a quantity", "(Fused Aluminum Oxide, Silicon Carbide, And Metallic Abrasives)": "only capacity is published",
-        "Sand And Gravel (Construction)": "US only", "Stone (Crushed)": "US only", "Stone (Dimension)": "US only"}
+SKIP = {
+    "Gemstones": "published as a dollar value, not a quantity",
+    "(Fused Aluminum Oxide, Silicon Carbide, And Metallic Abrasives)": "only capacity is published",
+    "Sand And Gravel (Construction)": "US only",
+    "Stone (Crushed)": "US only",
+    "Stone (Dimension)": "US only",
+}
 PROSE_ONLY = "USGS gives no country-level table (text only or data not available)"
 
 # USGS wording -> the Natural Earth names used by the map outlines
-COUNTRY = {"United States": "United States of America", "Burma": "Myanmar", "Congo (Kinshasa)": "Dem. Rep. Congo",
-           "Congo (Brazzaville)": "Rep. of Congo", "Korea, Republic of": "South Korea", "Korea, North": "North Korea",
-           "Korea, Republic": "South Korea", "Türkiye": "Turkey", "Cote d'Ivoire": "Côte d'Ivoire", "Eswatini": "eSwatini",
-           "North Macedonia": "Macedonia", "Dominican Republic": "Dominican Rep.", "Bosnia and Herzegovina": "Bosnia and Herz.",
-           "Central African Republic": "Central African Rep.", "Equatorial Guinea": "Eq. Guinea", "Solomon Islands": "Solomon Is.",
-           "South Sudan": "S. Sudan", "Czechia": "Czechia", "Czech Republic": "Czechia", "Western Sahara": "W. Sahara",
-           "Falkland Islands": "Falkland Is.", "Laos": "Laos", "Vietnam": "Vietnam", "Russia": "Russia", "Iran": "Iran",
-           "Syria": "Syria", "Slovak Republic": "Slovakia", "Timor-Leste": "Timor-Leste", "Bolivia": "Bolivia"}
-UNITS = [("thousand metric tons", 1e3, "t"), ("million metric tons", 1e6, "t"), ("metric tons", 1, "t"),
-         ("kilograms", 1e-3, "t"), ("thousand carats", 1e3, "carats"), ("million carats", 1e6, "carats"), ("carats", 1, "carats"),
-         ("million cubic meters", 1e6, "m³"), ("thousand cubic meters", 1e3, "m³"), ("cubic meters", 1, "m³")]
+COUNTRY = {
+    "United States": "United States of America",
+    "Burma": "Myanmar",
+    "Congo (Kinshasa)": "Dem. Rep. Congo",
+    "Congo (Brazzaville)": "Rep. of Congo",
+    "Korea, Republic of": "South Korea",
+    "Korea, North": "North Korea",
+    "Korea, Republic": "South Korea",
+    "Türkiye": "Turkey",
+    "Cote d'Ivoire": "Côte d'Ivoire",
+    "Eswatini": "eSwatini",
+    "North Macedonia": "Macedonia",
+    "Dominican Republic": "Dominican Rep.",
+    "Bosnia and Herzegovina": "Bosnia and Herz.",
+    "Central African Republic": "Central African Rep.",
+    "Equatorial Guinea": "Eq. Guinea",
+    "Solomon Islands": "Solomon Is.",
+    "South Sudan": "S. Sudan",
+    "Czechia": "Czechia",
+    "Czech Republic": "Czechia",
+    "Western Sahara": "W. Sahara",
+    "Falkland Islands": "Falkland Is.",
+    "Laos": "Laos",
+    "Vietnam": "Vietnam",
+    "Russia": "Russia",
+    "Iran": "Iran",
+    "Syria": "Syria",
+    "Slovak Republic": "Slovakia",
+    "Timor-Leste": "Timor-Leste",
+    "Bolivia": "Bolivia",
+}
+UNITS = [
+    ("thousand metric tons", 1e3, "t"),
+    ("million metric tons", 1e6, "t"),
+    ("metric tons", 1, "t"),
+    ("kilograms", 1e-3, "t"),
+    ("thousand carats", 1e3, "carats"),
+    ("million carats", 1e6, "carats"),
+    ("carats", 1, "carats"),
+    ("million cubic meters", 1e6, "m³"),
+    ("thousand cubic meters", 1e3, "m³"),
+    ("cubic meters", 1, "m³"),
+]
 
 
 def unit_of(text):
@@ -190,12 +244,12 @@ def unit_of(text):
 
 
 def clean_country(name):
-    n = re.sub(r"(?<=[a-z\)])\d+$", "", name.strip())   # stray footnote digits
+    n = re.sub(r"(?<=[a-z\)])\d+$", "", name.strip())  # stray footnote digits
     if n in COUNTRY:
         return COUNTRY[n]
-    n = re.sub(r"\s*\(.*?\)", "", n)               # "Brazil (beneficiated)" -> "Brazil"
+    n = re.sub(r"\s*\(.*?\)", "", n)  # "Brazil (beneficiated)" -> "Brazil"
     if not n.startswith("Korea,"):
-        n = n.split(",")[0]                         # "Argentina, crude ore" -> "Argentina"
+        n = n.split(",")[0]  # "Argentina, crude ore" -> "Argentina"
     n = n.strip()
     n = COUNTRY.get(n, n)
     return known_names().get(_squash(n), n)
@@ -207,8 +261,16 @@ def _squash(s):
 
 @functools.cache
 def known_names():
-    """Country names we expect, keyed without spaces: the PDF sometimes splits a word ("Ar gentina") at a kerning gap."""
-    names = set(pd.read_csv(OUT / "countries.csv").name) | set(COUNTRY.values()) | set(COUNTRY) | {"Côte d'Ivoire"}
+    """Expected country names, keyed without spaces.
+
+    The PDF sometimes splits a word at a kerning gap ("Ar gentina"), so names are matched with spaces removed.
+    """
+    names = (
+        set(pd.read_csv(OUT / "countries.csv").name)
+        | set(COUNTRY.values())
+        | set(COUNTRY)
+        | {"Côte d'Ivoire"}
+    )
     return {_squash(n): COUNTRY.get(n, n) for n in names}
 
 
@@ -251,15 +313,42 @@ def write_outputs(meta):
             if wprod is None and psum:
                 wprod = psum  # USGS gave no total; fall back on the sum of the countries listed
             ratio = psum / wprod if wprod else None
-            out_com.append({"commodity": name, "chapter": raw_name, "unit": info["unit"], "base_unit": base,
-                            "table": info["table"], "world_production": wprod, "world_reserves": wres,
-                            "countries": len(rows), "listed_vs_world_total": None if ratio is None else round(ratio, 3)})
+            out_com.append(
+                {
+                    "commodity": name,
+                    "chapter": raw_name,
+                    "unit": info["unit"],
+                    "base_unit": base,
+                    "table": info["table"],
+                    "world_production": wprod,
+                    "world_reserves": wres,
+                    "countries": len(rows),
+                    "listed_vs_world_total": None if ratio is None else round(ratio, 3),
+                }
+            )
             for c, x in rows.items():
-                out_rows.append({"commodity": name, "country": c, "production_2024": x["production"], "reserves": x["reserves"]})
-    pd.DataFrame(out_rows).to_csv(OUT / "usgs_world.csv", index=False)
-    pd.DataFrame(out_com).to_csv(OUT / "usgs_commodities.csv", index=False)
-    pd.DataFrame(notes, columns=["commodity", "why_no_data"]).to_csv(OUT / "usgs_skipped.csv", index=False)
-    print(f"{len(out_com)} commodities, {len(out_rows)} country rows; skipped {len(notes)}")
+                out_rows.append(
+                    {
+                        "commodity": name,
+                        "country": c,
+                        "production_2024": x["production"],
+                        "reserves": x["reserves"],
+                    }
+                )
+    # Keep only the commodities the page shows (listed in commodity_meta.csv).
+    wanted = set(pd.read_csv(OUT / "commodity_meta.csv").commodity)
+    com = pd.DataFrame(out_com)
+    world = pd.DataFrame(out_rows)
+    left_out = sorted(set(com.commodity) - wanted)
+    com[com.commodity.isin(wanted)].to_csv(OUT / "usgs_commodities.csv", index=False)
+    world = world[world.commodity.isin(wanted)]
+    world.to_csv(OUT / "usgs_world.csv", index=False)
+
+    print(f"Wrote {com.commodity.isin(wanted).sum()} commodities and {len(world)} country rows.")
+    if left_out:
+        print("  extracted but not in commodity_meta.csv, so not saved:", ", ".join(left_out))
+    for name, why in notes:
+        print(f"  no data for {name}: {why}")
 
 
 if __name__ == "__main__":
