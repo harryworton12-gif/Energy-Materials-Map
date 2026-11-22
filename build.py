@@ -8,7 +8,7 @@ rewrites only its two generated blocks, leaving the layout, styling and behaviou
     // DATA:START ... // DATA:END     every material: production, reserves, uses, refining
     // TRADE:START ... // TRADE:END   trade routes for the eight battery materials
 
-It then writes battery-minerals-atlas-standalone.html, the same page with its libraries
+It then writes index.html, the same page with its libraries
 inlined so it opens without an internet connection.
 
 Inputs (all in data/):
@@ -29,7 +29,7 @@ from fetch_comtrade import QUERIES
 ROOT = Path(__file__).parent
 DATA = ROOT / "data"
 PAGE = ROOT / "battery-minerals-atlas.html"
-STANDALONE = ROOT / "battery-minerals-atlas-standalone.html"
+STANDALONE = ROOT / "index.html"  # served by GitHub Pages
 
 # Libraries the page loads from the CDN; build_standalone() swaps each tag for the copy in vendor/.
 LIBRARIES = {

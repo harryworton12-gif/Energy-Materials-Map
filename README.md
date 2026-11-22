@@ -1,60 +1,96 @@
 # Energy Minerals Atlas
 
-An interactive world map of where minerals that matter for the energy transition are produced, how much each country holds in reserves, and (for the eight battery materials) who refines them and where they are traded. It covers 70 materials from the USGS Mineral Commodity Summaries 2025, grouped by the technologies that use them: batteries, solar, wind, grid, nuclear and hydrogen. A heatmap at the bottom shows which materials matter for which technology.
+An interactive world map of where the minerals behind clean energy come from: who mines them, who holds the reserves, and, for the key battery materials, who refines them and where they are shipped.
 
-## Open it
+**[View the live map](https://harryworton12-gif.github.io/battery-materials-map/)**
 
-Open `battery-minerals-atlas.html` in a browser. No server is needed, but it loads its charting library and fonts from the internet.
+## Features
 
-`battery-minerals-atlas-standalone.html` is the same page with the libraries built in, so it opens offline and is the one to email or host.
+- **70 minerals** from the USGS Mineral Commodity Summaries 2025, with 2024 production and reserves for every country USGS lists.
+- **Grouped by technology:** filter by batteries & EVs, solar, wind, grid, nuclear or hydrogen, and by metals, non-metals or other materials.
+- **"How it's used" notes:** click a technology tag on any material to see what it does in that technology.
+- **Relevance matrix:** a heatmap of which minerals matter for which technology.
+- **Supply chains** for lithium, cobalt, nickel, graphite, manganese, copper, rare earths and phosphate: refining shares and trade routes drawn on the map.
+- **Country profiles:** click any country to see its share of every mineral.
+- **No server or install:** the whole map is a single HTML file.
 
-## Rebuild it from the data
+## Quick start
 
-Python keeps the page in step with the CSV files in `data/`. You need Python 3.10 or newer and `pip install -r requirements.txt`.
+To view the map, open the live link above, or download `index.html` and open it in any browser. It works offline.
+
+To rebuild it from the data you need Python 3.10 or newer:
 
 ```bash
-# only when USGS publishes a new edition (download the PDF from pubs.usgs.gov/periodicals/mcs2025/mcs2025.pdf)
-python extract_usgs.py path/to/mcs2025.pdf   # writes data/usgs_world.csv and usgs_commodities.csv
-
-# optional: refresh the trade routes from UN Comtrade (about 5-10 minutes, no key needed)
-python fetch_comtrade.py --year 2024
-
-# copy all the data into the page and rebuild the standalone copy
+pip install -r requirements.txt
 python build.py
 ```
 
-The Python code is formatted with [black](https://black.readthedocs.io) and checked with [ruff](https://docs.astral.sh/ruff/); both read their settings from `pyproject.toml`.
+## How it works
 
-`build.py` replaces only the generated blocks in the HTML (marked `DATA:START` and `TRADE:START`). Layout, styling, behaviour and the text at the bottom of the page are edited by hand in `battery-minerals-atlas.html` and are never overwritten.
+```
+USGS PDF ──► extract_usgs.py ──► data/*.csv ──► build.py ──► battery-minerals-atlas.html ──► index.html
+UN Comtrade ► fetch_comtrade.py ─┘   (+ hand-edited CSVs)       (page source)                 (self-contained copy)
+```
 
-## Files
+1. `extract_usgs.py` reads the world production and reserves tables from the USGS PDF. It checks each table against USGS's own world total.
+2. `fetch_comtrade.py` downloads trade flows from the UN Comtrade public API (about 5-10 minutes, no key needed).
+3. `build.py` writes the data into the page's generated blocks (`DATA:START` and `TRADE:START`). It then makes `index.html`, a copy with the D3 libraries built in so it needs no internet connection.
 
-| File | What it holds |
+The layout, styling and behaviour live in `battery-minerals-atlas.html` and are edited by hand. `build.py` never overwrites them.
+
+### Updating the data
+
+| To change | Edit, then run `python build.py` |
 |---|---|
-| `battery-minerals-atlas.html` | The page: layout, styling and behaviour, plus the generated data blocks |
-| `battery-minerals-atlas-standalone.html` | Built by `build.py`: the same page with its libraries inlined, for offline use and sharing |
-| `build.py` | Copies the CSV data into the page |
-| `extract_usgs.py` | Reads the USGS PDF tables into CSV files and checks each table against USGS's own world total |
-| `fetch_comtrade.py` | Downloads trade routes from UN Comtrade (`build.py` also reads its product list) |
-| `vendor/` | The d3 and topojson libraries used for the standalone copy |
-| `data/commodity_meta.csv` | Each material's name, symbol, type (metal, non-metal or other) and its 0-3 relevance score for each technology |
-| `data/energy_uses.csv` | The text explaining how each material is used in each technology |
-| `data/usgs_world.csv` | Production and reserves by country, in tonnes unless the material uses another unit |
-| `data/usgs_commodities.csv` | World totals, units and the USGS table each material came from |
-| `data/materials.csv`, `refining.csv`, `home_refining.csv` | Names, refining shares and home-refining countries for the eight battery materials |
-| `data/trade_flows.csv` | Trade routes for the eight battery materials: tonnes and US dollars |
-| `data/countries.csv` | A map anchor point (latitude, longitude) for each country |
+| Material names, symbols, type, or technology relevance scores (0-3) | `data/commodity_meta.csv` |
+| The "how it's used" text | `data/energy_uses.csv` |
+| Refining shares | `data/refining.csv` |
+| Production and reserves for a new USGS edition | Run `python extract_usgs.py path/to/mcs.pdf` first |
+| Trade routes | Run `python fetch_comtrade.py --year 2024` first |
 
-The relevance scores and the "how it's used" text are editorial summaries, not USGS data. Edit the CSV and rerun `python build.py`.
+To add a mineral, add its row to `commodity_meta.csv`, then run `extract_usgs.py` and `build.py`.
 
-## Sources and caveats
+## Project structure
 
-- **Production and reserves:** USGS Mineral Commodity Summaries 2025. Production is the 2024 estimate. For some minerals the world total is for a product form (gross weight, or refinery rather than mine output), so check the unit under the world total on the page. Where USGS gives only a range, text or "withheld", the country is not shaded.
-- **Not covered:** cesium, germanium, rubidium, scandium, thallium, thorium and yttrium, and a few bulk materials, because USGS publishes no country figures for them.
-- **Refining shares:** IEA Global Critical Minerals Outlook 2024 (2023 data), rounded. Copper uses USGS 2024 refinery output.
-- **Trade routes:** UN Comtrade 2024, as reported by importing countries ("mirror" data), because several mining countries such as DR Congo don't report their own exports. Tonnes are product weight (ore, concentrate or intermediate), not metal content. Routes under 1% of a country's exports are hidden.
-- Some routes reflect transit or customs reporting rather than refining, for example DR Congo cobalt "to" Namibia and Zambia (export corridors). Cobalt that leaves Indonesia, Cuba, Papua New Guinea and the Philippines inside nickel intermediates is counted under nickel. China's own graphite exports are not included.
+```
+├── index.html                    self-contained page (built; served by GitHub Pages)
+├── battery-minerals-atlas.html   page source: layout, styles, script and generated data blocks
+├── build.py                      writes the CSV data into the page and builds index.html
+├── extract_usgs.py               USGS PDF -> data/usgs_*.csv
+├── fetch_comtrade.py             UN Comtrade API -> data/trade_flows.csv
+├── data/
+│   ├── commodity_meta.csv        names, types and technology relevance scores
+│   ├── energy_uses.csv           how each mineral is used in each technology
+│   ├── usgs_world.csv            production and reserves by country
+│   ├── usgs_commodities.csv      world totals, units and source tables
+│   ├── materials.csv             units and refining labels for the 8 battery materials
+│   ├── refining.csv              refining shares by country
+│   ├── home_refining.csv         countries that refine their own ore
+│   ├── trade_flows.csv           trade routes (tonnes and US dollars)
+│   └── countries.csv             map anchor points for trade lines
+└── vendor/                       D3 and topojson-client, inlined into index.html
+```
+
+## Data sources
+
+| Data | Source | Notes |
+|---|---|---|
+| Production and reserves | [USGS Mineral Commodity Summaries 2025](https://pubs.usgs.gov/publication/mcs2025) | 2024 estimates. Public domain. |
+| Refining shares | [IEA Global Critical Minerals Outlook 2024](https://www.iea.org/reports/global-critical-minerals-outlook-2024) | 2023 data, rounded. Copper uses USGS 2024 refinery output. |
+| Trade routes | [UN Comtrade](https://comtradeplus.un.org/) | 2024, as reported by importing countries. |
+| Technology relevance and uses | Editorial | Summaries informed by IEA and US DOE critical-materials work. Judgements, not measurements. |
+
+### Limitations
+
+- **Missing minerals:** cesium, germanium, rubidium, scandium, thallium, thorium and yttrium are left out because USGS publishes no country figures for them.
+- **Production form:** for some minerals the world total is for a product form, such as gross weight or refinery output, not mine output. The page shows the unit under each total.
+- **Unshaded countries:** where USGS gives a figure only as a range, as text, or "withheld", the country is not shaded.
+- **Trade data:**
+  - Tonnes are product weight (ore, concentrate or intermediate), not metal content, and routes under 1% of a country's exports are hidden.
+  - Some routes reflect transit rather than refining, for example DR Congo cobalt "to" Namibia and Zambia.
+  - Cobalt shipped inside nickel intermediates is counted under nickel.
+  - China's own graphite exports are not included.
 
 ## License
 
-The code is released under the [MIT License](LICENSE). The data keeps its sources' terms: USGS figures are public domain, IEA refining shares and UN Comtrade trade data are used with attribution under their providers' terms. The bundled D3 and topojson-client libraries are ISC-licensed (see [vendor/LICENSES.md](vendor/LICENSES.md)).
+Code: [MIT](LICENSE). Data keeps its sources' terms: USGS figures are public domain, and IEA and UN Comtrade figures are used with attribution. The bundled D3 and topojson-client libraries are ISC-licensed (see [vendor/LICENSES.md](vendor/LICENSES.md)).

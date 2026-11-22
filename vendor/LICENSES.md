@@ -1,6 +1,6 @@
 # Third-party libraries
 
-These files are unmodified copies used by `build.py` to make the offline (standalone) page.
+These files are unmodified copies used by `build.py` to make `index.html`, the self-contained copy of the page.
 
 | File | Library | Version | License |
 |---|---|---|---|
