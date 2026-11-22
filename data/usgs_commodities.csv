@@ -1,0 +1,80 @@
+commodity,chapter,unit,base_unit,table,world_production,world_reserves,countries,listed_vs_world_total
+Aluminum,Aluminum,Data in thousand metric tons unless otherwise specified,t,World Smelter Production and Capacity,72000000.0,,12,0.9
+Antimony,Antimony,"Data in metric tons, antimony content, unless otherwise specified",t,World Mine Production and Reserves,100000.0,,17,1.04
+Arsenic,Arsenic,"Data in metric tons, arsenic content,1 unless otherwise specified",t,World Production and Capacity,58000.0,,6,1.004
+Asbestos,Asbestos,Data in metric tons unless otherwise specified,t,World Mine Production and Reserves,1200000.0,,4,0.975
+Barite,Barite,Data in thousand metric tons unless otherwise specified,t,World Mine Production and Reserves,8200000.0,,10,0.962
+Bauxite,Bauxite And Alumina,Data in thousand metric dry tons unless otherwise specified,t,World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves,450000.0,29000000.0,14,0.988
+Alumina,Bauxite And Alumina,Data in thousand metric dry tons unless otherwise specified,t,World Alumina Refinery and Bauxite Mine Production and Bauxite Reserves,142000.0,,19,0.989
+Beryllium,Beryllium,"Data in metric tons, beryllium content, unless otherwise specified",t,World Mine Production and Reserves,360.0,,7,1.011
+Bismuth,Bismuth,Data in metric tons unless otherwise specified,t,World Refinery Production and Capacity,16000.0,,7,0.994
+Boron,Boron,Data in thousand metric tons unless otherwise specified,t,World Production and Reserves,4570000.0,,9,1.0
+Bromine,Bromine,"Data in metric tons, bromine content, unless otherwise specified",t,World Production and Reserves,400000.0,,7,0.988
+Cadmium,Cadmium,Data in metric tons unless otherwise specified,t,World Refinery Production and Reserves,24000.0,,16,0.987
+Cement,Cement,Data in thousand metric tons unless otherwise specified,t,World Production and Capacity,4000000000.0,,14,0.786
+Chromium,Chromium,"Data in thousand metric tons, chromium content, unless otherwise specified",t,World Mine Production (gross weight) and Reserves,47000000.0,1200000000.0,8,0.936
+Bentonite,Clays,Data in thousand metric tons unless otherwise specified,t,World Mine Production and Reserves,21000000.0,,13,0.803
+Fuller's Earth,Clays,Data in thousand metric tons unless otherwise specified,t,World Mine Production and Reserves,4300000.0,,7,0.963
+Kaolin,Clays,Data in thousand metric tons unless otherwise specified,t,World Mine Production and Reserves,44000000.0,,11,0.78
+Cobalt,Cobalt,"Data in metric tons, cobalt content, unless otherwise specified",t,World Mine Production and Reserves,290000.0,11000000.0,12,0.972
+Copper,Copper,"Data in thousand metric tons, copper content, unless otherwise specified",t,World Mine and Refinery Production and Reserves,23000000.0,980000000.0,14,0.867
+Diamond (Industrial),Diamond (Industrial),Data in million carats unless otherwise specified,carats,World Natural Industrial Diamond Mine Production and Reserves,41000000.0,1700000000.0,6,0.976
+Diatomite,Diatomite,Data in thousand metric tons unless otherwise specified,t,World Mine Production and Reserves,3000000.0,,14,0.953
+Feldspar And Nepheline Syenite,Feldspar And Nepheline Syenite,Data in thousand metric tons unless otherwise specified,t,World Mine Production and Reserves,33000000.0,,13,0.91
+Fluorspar,Fluorspar,Data in thousand metric tons unless otherwise specified,t,World Mine Production and Reserves,9500000.0,320000000.0,10,0.979
+Gallium,Gallium,"Data in kilograms, gallium content, unless otherwise specified",t,World Low-Purity Production and Production Capacity,760.0,,4,1.003
+Garnet (Industrial),Garnet (Industrial),Data in metric tons unless otherwise specified,t,World Mine Production and Reserves,980000.0,,7,1.0
+Gold,Gold,"Data in metric tons,1 gold content, unless otherwise specified",t,World Mine Production and Reserves,3300.0,64000.0,17,0.748
+Graphite (Natural),Graphite (Natural),Data in metric tons unless otherwise specified,t,World Mine Production and Reserves,1600000.0,290000000.0,18,1.019
+Gypsum,Gypsum,Data in thousand metric tons unless otherwise specified,t,World Mine Production and Reserves,160000000.0,,19,0.854
+Helium,Helium,"Data in million cubic meters, helium gas1 content, unless otherwise specified",m³,World Production and Reserves,180000000.0,,7,1.028
+Indium,Indium,Data in metric tons unless otherwise specified,t,World Refinery Production and Capacity,1080.0,,8,0.997
+Iodine,Iodine,"Data in metric tons, elemental iodine, unless otherwise specified",t,World Mine Production and Reserves,33000.0,6200000.0,8,1.0
+Pig Iron,Iron And Steel,"Data in million metric tons, metal, unless otherwise specified",t,World Production,1300000000.0,,16,0.937
+Raw Steel,Iron And Steel,"Data in million metric tons, metal, unless otherwise specified",t,World Production,1900000000.0,,16,0.88
+Iron Ore,Iron Ore,"Data in thousand metric tons, usable ore, unless otherwise specified",t,World Mine Production and Reserves,2500000000.0,200000000000.0,17,0.976
+Iron Oxide Pigments,Iron Oxide Pigments,Data in metric tons unless otherwise specified,t,World Mine Production and Reserves,3735000.0,,7,1.0
+Kyanite And Related Minerals,Kyanite And Related Minerals,Data in metric tons unless otherwise specified,t,World Mine Production and Reserves,433600.0,,6,1.0
+Lead,Lead,"Data in thousand metric tons, lead content, unless otherwise specified",t,World Mine Production and Reserves,4300000.0,96000000.0,12,0.888
+Lime,Lime,Data in thousand metric tons unless otherwise specified,t,World Lime Production and Limestone Reserves,420000000.0,,22,0.969
+Lithium,Lithium,"Data in metric tons, lithium content, unless otherwise specified",t,World Mine Production and Reserves,240000.0,30000000.0,10,0.981
+Magnesium Compounds,Magnesium Compounds,"Data in thousand metric tons, magnesium oxide (MgO) content,2 unless otherwise specified",t,World Magnesite Mine Production and Reserves (gross weight),22000000.0,7700000000.0,13,0.991
+Magnesium Metal,Magnesium Metal,Data in thousand metric tons unless otherwise specified,t,World Primary Production and Reserves,1000000.0,,7,1.045
+Manganese,Manganese,"Data in thousand metric tons, gross weight, unless otherwise specified",t,World Mine Production (manganese content) and Reserves,20000000.0,1700000000.0,9,0.927
+Mercury,Mercury,"Data in metric tons, mercury content, unless otherwise specified",t,World Mine Production and Reserves,1200.0,,6,0.965
+Mica (Scrap And Flake),Mica (Natural),Data in metric tons unless otherwise specified,t,World Mine Production and Reserves,380000.0,,10,0.823
+Molybdenum,Molybdenum,"Data in metric tons, molybdenum content, unless otherwise specified",t,World Mine Production and Reserves,260000.0,15000000.0,16,1.014
+Nickel,Nickel,"Data in metric tons, nickel content, unless otherwise specified",t,World Mine Production and Reserves,3700000.0,,9,0.907
+Niobium (Columbium),Niobium (Columbium),"Data in metric tons, niobium content, unless otherwise specified",t,World Mine Production and Reserves,110000.0,17000000.0,6,0.985
+Nitrogen (Fixed)—Ammonia,Nitrogen (Fixed)—Ammonia,"Data in thousand metric tons, nitrogen content, unless otherwise specified",t,World Ammonia Production and Reserves,150000000.0,,22,0.936
+Peat,Peat,Data in thousand metric tons unless otherwise specified,t,World Mine Production and Reserves,20000000.0,13000000000.0,12,0.972
+Perlite,Perlite,Data in thousand metric tons unless otherwise specified,t,World Mine Production and Reserves,4300000.0,,13,0.998
+Phosphate Rock,Phosphate Rock,"Data in thousand metric tons, marketable phosphate rock, unless otherwise specified",t,World Mine Production and Reserves,240000000.0,74000000000.0,24,0.992
+Palladium,Platinum-Group Metals,"Data in kilograms, platinum-group-metal (PGM) content, unless otherwise specified",t,World Mine Production and Reserves,190.0,,5,0.974
+Platinum,Platinum-Group Metals,"Data in kilograms, platinum-group-metal (PGM) content, unless otherwise specified",t,World Mine Production and Reserves,170.0,,5,0.966
+Potash,Potash,"Data in thousand metric tons, potassium oxide (K2O) equivalent, unless otherwise specified",t,World Mine Production and Reserves,48000000.0,,12,0.999
+Pumice And Pumicite,Pumice And Pumicite,Data in thousand metric tons unless otherwise specified,t,World Mine Production and Reserves,18000000.0,,14,0.889
+Rare Earths,Rare Earths,"Data in metric tons, rare-earth-oxide (REO) equivalent, unless otherwise specified",t,World Mine Production and Reserves,390000.0,90000000.0,16,1.007
+Rhenium,Rhenium,"Data in kilograms, rhenium content, unless otherwise specified",t,World Mine Production and Reserves,62.0,,9,0.998
+Salt,Salt,Data in thousand metric tons unless otherwise specified,t,World Production and Reserves,280000000.0,,23,0.884
+Sand And Gravel (Industrial),Sand And Gravel (Industrial),Data in thousand metric tons unless otherwise specified,t,World Mine Production and Reserves,440000000.0,,20,0.958
+Selenium,Selenium,"Data in metric tons, selenium content, unless otherwise specified",t,World Refinery Production and Reserves,3700.0,92000.0,16,0.989
+Ferrosilicon,Silicon,"Data in thousand metric tons, silicon content, unless otherwise specified",t,World Production,5100000.0,,14,0.975
+Silicon Metal,Silicon,"Data in thousand metric tons, silicon content, unless otherwise specified",t,World Production,4600000.0,,12,0.983
+Silver,Silver,"Data in metric tons,1 silver content, unless otherwise specified",t,World Mine Production and Reserves,25000.0,640000.0,14,0.924
+Soda Ash,Soda Ash,Data in thousand metric tons unless otherwise specified,t,World Mine Production and Reserves,24000000.0,25000000000.0,5,0.983
+Strontium,Strontium,"Data in metric tons, strontium content, unless otherwise specified",t,World Mine Production and Reserves,510000.0,,5,0.992
+Sulfur,Sulfur,"Data in thousand metric tons, sulfur content, unless otherwise specified",t,World Production and Reserves,85000000.0,,17,0.927
+Talc And Pyrophyllite,Talc And Pyrophyllite,Data in thousand metric tons unless otherwise specified,t,World Mine Production and Reserves,6900000.0,,14,0.899
+Tantalum,Tantalum,"Data in metric tons, tantalum content, unless otherwise specified",t,World Mine Production and Reserves,2100.0,,11,0.993
+Tellurium,Tellurium,"Data in metric tons, tellurium content, unless otherwise specified",t,World Refinery Production and Reserves,980.0,35000.0,9,1.001
+Tin,Tin,"Data in metric tons, tin content, unless otherwise specified",t,World Mine Production and Reserves,300000.0,,14,0.979
+Titanium Sponge Metal,Titanium And Titanium Dioxide,Data in metric tons unless otherwise specified,t,World Sponge Metal Production and Sponge and Pigment Capacity,320000.0,,6,1.013
+Titanium Mineral Concentrates,Titanium Mineral Concentrates,"Data in thousand metric tons, titanium dioxide (TiO2) content, unless otherwise specified",t,World Mine Production and Reserves,8900000.0,,11,0.964
+Tungsten,Tungsten,"Data in metric tons, tungsten content, unless otherwise specified",t,World Mine Production and Reserves,81000.0,,10,0.986
+Vanadium,Vanadium,"Data in metric tons, vanadium content, unless otherwise specified",t,World Mine Production and Reserves,100000.0,18000000.0,6,1.04
+Vermiculite,Vermiculite,Data in thousand metric tons unless otherwise specified,t,World Mine Production and Reserves,460000.0,,10,1.004
+Wollastonite,Wollastonite,Data in metric tons unless otherwise specified,t,World Mine Production and Reserves,1100000.0,,5,0.95
+Zeolites (Natural),Zeolites (Natural),Data in metric tons unless otherwise specified,t,World Mine Production and Reserves,1000000.0,,14,1.033
+Zinc,Zinc,"Data in thousand metric tons, zinc content, unless otherwise specified",t,World Mine Production and Reserves,12000000.0,230000000.0,11,0.855
+Zirconium And Hafnium,Zirconium And Hafnium,Data in metric tons unless otherwise specified,t,World Mine Production and Reserves,1500000.0,70000000.0,10,0.923

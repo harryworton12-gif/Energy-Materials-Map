@@ -1,0 +1,910 @@
+commodity,country,production_2024,reserves
+Aluminum,United States of America,670000.0,
+Aluminum,Australia,1500000.0,
+Aluminum,Bahrain,1600000.0,
+Aluminum,Brazil,1100000.0,
+Aluminum,Canada,3300000.0,
+Aluminum,China,43000000.0,
+Aluminum,Iceland,780000.0,
+Aluminum,India,4200000.0,
+Aluminum,Malaysia,870000.0,
+Aluminum,Norway,1300000.0,
+Aluminum,Russia,3800000.0,
+Aluminum,United Arab Emirates,2700000.0,
+Antimony,United States of America,,60000.0
+Antimony,Australia,2000.0,140000.0
+Antimony,Bolivia,3700.0,310000.0
+Antimony,Myanmar,4500.0,140000.0
+Antimony,Canada,,78000.0
+Antimony,China,60000.0,670000.0
+Antimony,Guatemala,50.0,
+Antimony,Iran,500.0,
+Antimony,Kazakhstan,40.0,
+Antimony,Kyrgyzstan,20.0,260000.0
+Antimony,Laos,200.0,
+Antimony,Mexico,800.0,18000.0
+Antimony,Pakistan,250.0,26000.0
+Antimony,Russia,13000.0,350000.0
+Antimony,Tajikistan,17000.0,50000.0
+Antimony,Turkey,1600.0,99000.0
+Antimony,Vietnam,300.0,54000.0
+Arsenic,Belgium,1000.0,
+Arsenic,China,24000.0,
+Arsenic,Japan,40.0,
+Arsenic,Morocco,6000.0,
+Arsenic,Peru,27000.0,
+Arsenic,Russia,200.0,
+Asbestos,Brazil,160000.0,11000000.0
+Asbestos,China,200000.0,18000000.0
+Asbestos,Kazakhstan,210000.0,
+Asbestos,Russia,600000.0,110000000.0
+Barite,China,2100000.0,110000000.0
+Barite,India,2600000.0,51000000.0
+Barite,Iran,310000.0,100000000.0
+Barite,Kazakhstan,650000.0,85000000.0
+Barite,Laos,300000.0,
+Barite,Mexico,330000.0,
+Barite,Morocco,1000000.0,
+Barite,Pakistan,130000.0,
+Barite,Russia,250000.0,12000000.0
+Barite,Turkey,220000.0,34000000.0
+Bauxite,United States of America,,20000.0
+Bauxite,Australia,100000.0,3500000.0
+Bauxite,Brazil,33000.0,2700000.0
+Bauxite,China,93000.0,680000.0
+Bauxite,Greece,1200.0,
+Bauxite,Guinea,130000.0,7400000.0
+Bauxite,India,25000.0,650000.0
+Bauxite,Indonesia,32000.0,2800000.0
+Bauxite,Jamaica,6100.0,2000000.0
+Bauxite,Kazakhstan,4900.0,280000.0
+Bauxite,Russia,6300.0,480000.0
+Bauxite,Saudi Arabia,5800.0,180000.0
+Bauxite,Turkey,3200.0,69000.0
+Bauxite,Vietnam,4200.0,3100000.0
+Alumina,United States of America,720.0,
+Alumina,Australia,18000.0,
+Alumina,Brazil,11000.0,
+Alumina,Canada,1500.0,
+Alumina,China,84000.0,
+Alumina,Germany,960.0,
+Alumina,Greece,860.0,
+Alumina,Guinea,300.0,
+Alumina,India,7600.0,
+Alumina,Indonesia,1300.0,
+Alumina,Ireland,1600.0,
+Alumina,Jamaica,1500.0,
+Alumina,Kazakhstan,1400.0,
+Alumina,Russia,2900.0,
+Alumina,Saudi Arabia,1800.0,
+Alumina,Spain,820.0,
+Alumina,Turkey,320.0,
+Alumina,United Arab Emirates,2400.0,
+Alumina,Vietnam,1500.0,
+Beryllium,United States of America,180.0,
+Beryllium,Brazil,80.0,
+Beryllium,China,77.0,
+Beryllium,Madagascar,1.0,
+Beryllium,Mozambique,24.0,
+Beryllium,Rwanda,1.0,
+Beryllium,Uganda,1.0,
+Bismuth,Bolivia,70.0,
+Bismuth,Bulgaria,50.0,
+Bismuth,China,13000.0,
+Bismuth,Japan,500.0,
+Bismuth,Kazakhstan,180.0,
+Bismuth,South Korea,1000.0,
+Bismuth,Laos,1100.0,
+Boron,United States of America,,48000000.0
+Boron,Argentina,160000.0,
+Boron,Bolivia,230000.0,
+Boron,Chile,420000.0,35000000.0
+Boron,China,340000.0,9100000.0
+Boron,Germany,40000.0,
+Boron,Peru,300000.0,4000000.0
+Boron,Russia,80000.0,40000000.0
+Boron,Turkey,3000000.0,950000000.0
+Bromine,United States of America,,11000000.0
+Bromine,China,100000.0,130000.0
+Bromine,India,7000.0,
+Bromine,Israel,140000.0,
+Bromine,Japan,20000.0,
+Bromine,Jordan,120000.0,360000.0
+Bromine,Ukraine,8000.0,
+Cadmium,United States of America,300.0,
+Cadmium,Australia,900.0,
+Cadmium,Bulgaria,300.0,
+Cadmium,Canada,1700.0,
+Cadmium,China,9300.0,
+Cadmium,Germany,170.0,
+Cadmium,Japan,1700.0,
+Cadmium,Kazakhstan,1000.0,
+Cadmium,South Korea,4500.0,
+Cadmium,Mexico,1200.0,
+Cadmium,Netherlands,400.0,
+Cadmium,Norway,350.0,
+Cadmium,Peru,620.0,
+Cadmium,Poland,250.0,
+Cadmium,Russia,800.0,
+Cadmium,Uzbekistan,200.0,
+Cement,United States of America,86000000.0,
+Cement,Brazil,68000000.0,
+Cement,China,1900000000.0,
+Cement,Egypt,50000000.0,
+Cement,India,450000000.0,
+Cement,Indonesia,65000000.0,
+Cement,Iran,72000000.0,
+Cement,Japan,46000000.0,
+Cement,South Korea,52000000.0,
+Cement,Mexico,48000000.0,
+Cement,Russia,65000000.0,
+Cement,Saudi Arabia,50000000.0,
+Cement,Turkey,82000000.0,
+Cement,Vietnam,110000000.0,
+Chromium,United States of America,,630000.0
+Chromium,Brazil,1400000.0,6600000.0
+Chromium,Finland,1900000.0,8300000.0
+Chromium,India,4100000.0,79000000.0
+Chromium,Kazakhstan,6500000.0,320000000.0
+Chromium,South Africa,21000000.0,200000000.0
+Chromium,Turkey,8000000.0,27000000.0
+Chromium,Zimbabwe,1100000.0,540000000.0
+Bentonite,United States of America,4800000.0,
+Bentonite,Brazil,390000.0,
+Bentonite,China,2100000.0,
+Bentonite,Czechia,200000.0,
+Bentonite,Denmark,930000.0,
+Bentonite,Greece,1100000.0,
+Bentonite,India,3700000.0,
+Bentonite,Iran,850000.0,
+Bentonite,Mexico,80000.0,
+Bentonite,Russia,40000.0,
+Bentonite,Spain,120000.0,
+Bentonite,Turkey,2500000.0,
+Bentonite,Uzbekistan,60000.0,
+Fuller's Earth,United States of America,2400000.0,
+Fuller's Earth,Greece,50000.0,
+Fuller's Earth,India,730000.0,
+Fuller's Earth,Mexico,120000.0,
+Fuller's Earth,Senegal,150000.0,
+Fuller's Earth,Spain,620000.0,
+Fuller's Earth,Turkey,70000.0,
+Kaolin,United States of America,4500000.0,
+Kaolin,Brazil,830000.0,
+Kaolin,China,7800000.0,
+Kaolin,Czechia,2400000.0,
+Kaolin,India,8400000.0,
+Kaolin,Iran,2100000.0,
+Kaolin,Mexico,230000.0,
+Kaolin,Russia,2500000.0,
+Kaolin,Spain,280000.0,
+Kaolin,Turkey,1300000.0,
+Kaolin,Uzbekistan,4000000.0,
+Cobalt,United States of America,300.0,70000.0
+Cobalt,Australia,3600.0,1700000.0
+Cobalt,Canada,4500.0,220000.0
+Cobalt,Dem. Rep. Congo,220000.0,6000000.0
+Cobalt,Cuba,3500.0,500000.0
+Cobalt,Indonesia,28000.0,640000.0
+Cobalt,Madagascar,2600.0,100000.0
+Cobalt,New Caledonia,1500.0,
+Cobalt,Papua New Guinea,2800.0,62000.0
+Cobalt,Philippines,3800.0,260000.0
+Cobalt,Russia,8700.0,250000.0
+Cobalt,Turkey,2700.0,91000.0
+Copper,United States of America,1100000.0,47000000.0
+Copper,Australia,800000.0,100000000.0
+Copper,Canada,450000.0,8300000.0
+Copper,Chile,5300000.0,190000000.0
+Copper,China,1800000.0,41000000.0
+Copper,Dem. Rep. Congo,3300000.0,80000000.0
+Copper,India,30000.0,2200000.0
+Copper,Indonesia,1100000.0,21000000.0
+Copper,Kazakhstan,740000.0,20000000.0
+Copper,Mexico,700000.0,53000000.0
+Copper,Peru,2600000.0,100000000.0
+Copper,Poland,410000.0,34000000.0
+Copper,Russia,930000.0,80000000.0
+Copper,Zambia,680000.0,21000000.0
+Diamond (Industrial),Angola,1000000.0,150000000.0
+Diamond (Industrial),Botswana,8000000.0,250000000.0
+Diamond (Industrial),Dem. Rep. Congo,7000000.0,150000000.0
+Diamond (Industrial),Russia,16000000.0,990000000.0
+Diamond (Industrial),South Africa,4000000.0,85000000.0
+Diamond (Industrial),Zimbabwe,4000000.0,
+Diatomite,United States of America,880000.0,250000000.0
+Diatomite,Argentina,100000.0,
+Diatomite,China,370000.0,120000000.0
+Diatomite,Czechia,40000.0,
+Diatomite,Denmark,530000.0,
+Diatomite,France,250000.0,1000000.0
+Diatomite,Germany,50000.0,
+Diatomite,South Korea,50000.0,2200000.0
+Diatomite,Mexico,100000.0,
+Diatomite,Mozambique,50000.0,
+Diatomite,Peru,100000.0,
+Diatomite,Russia,50000.0,
+Diatomite,Spain,50000.0,57000000.0
+Diatomite,Turkey,240000.0,44000000.0
+Feldspar And Nepheline Syenite,United States of America,450000.0,
+Feldspar And Nepheline Syenite,Brazil,420000.0,150000000.0
+Feldspar And Nepheline Syenite,China,2500000.0,730000000.0
+Feldspar And Nepheline Syenite,India,6000000.0,320000000.0
+Feldspar And Nepheline Syenite,Iran,3100000.0,130000000.0
+Feldspar And Nepheline Syenite,Italy,2200000.0,
+Feldspar And Nepheline Syenite,South Korea,990000.0,200000000.0
+Feldspar And Nepheline Syenite,Morocco,590000.0,
+Feldspar And Nepheline Syenite,Russia,650000.0,
+Feldspar And Nepheline Syenite,Saudi Arabia,650000.0,
+Feldspar And Nepheline Syenite,Spain,990000.0,
+Feldspar And Nepheline Syenite,Thailand,2000000.0,45000000.0
+Feldspar And Nepheline Syenite,Turkey,9500000.0,720000000.0
+Fluorspar,China,5900000.0,86000000.0
+Fluorspar,Germany,100000.0,
+Fluorspar,Iran,120000.0,7600000.0
+Fluorspar,Mexico,1200000.0,68000000.0
+Fluorspar,Mongolia,1200000.0,34000000.0
+Fluorspar,Pakistan,52000.0,
+Fluorspar,South Africa,380000.0,41000000.0
+Fluorspar,Spain,160000.0,15000000.0
+Fluorspar,Thailand,76000.0,3600000.0
+Fluorspar,Vietnam,110000.0,16000000.0
+Gallium,China,750.0,
+Gallium,Japan,3.0,
+Gallium,South Korea,3.0,
+Gallium,Russia,6.0,
+Garnet (Industrial),United States of America,80000.0,5000000.0
+Garnet (Industrial),Australia,390000.0,
+Garnet (Industrial),China,310000.0,37000000.0
+Garnet (Industrial),Czechia,3000.0,
+Garnet (Industrial),India,15000.0,8600000.0
+Garnet (Industrial),Pakistan,1900.0,
+Garnet (Industrial),South Africa,180000.0,880000.0
+Gold,United States of America,160.0,3000.0
+Gold,Australia,290.0,12000.0
+Gold,Brazil,70.0,2400.0
+Gold,Burkina Faso,60.0,
+Gold,Canada,200.0,3200.0
+Gold,China,380.0,3100.0
+Gold,Colombia,60.0,700.0
+Gold,Ghana,130.0,1000.0
+Gold,Indonesia,100.0,3600.0
+Gold,Kazakhstan,130.0,2300.0
+Gold,Mali,70.0,800.0
+Gold,Mexico,130.0,1400.0
+Gold,Peru,100.0,2500.0
+Gold,Russia,310.0,12000.0
+Gold,South Africa,100.0,5000.0
+Gold,Tanzania,60.0,400.0
+Gold,Uzbekistan,120.0,1800.0
+Graphite (Natural),Austria,500.0,
+Graphite (Natural),Brazil,68000.0,74000000.0
+Graphite (Natural),Canada,20000.0,5900000.0
+Graphite (Natural),China,1270000.0,81000000.0
+Graphite (Natural),Germany,170.0,
+Graphite (Natural),India,27800.0,8600000.0
+Graphite (Natural),North Korea,8100.0,2000000.0
+Graphite (Natural),South Korea,9600.0,1800000.0
+Graphite (Natural),Madagascar,89000.0,27000000.0
+Graphite (Natural),Mexico,900.0,3100000.0
+Graphite (Natural),Mozambique,75000.0,25000000.0
+Graphite (Natural),Norway,7000.0,600000.0
+Graphite (Natural),Russia,20000.0,14000000.0
+Graphite (Natural),Sri Lanka,3300.0,1500000.0
+Graphite (Natural),Tanzania,25000.0,18000000.0
+Graphite (Natural),Turkey,3100.0,6900000.0
+Graphite (Natural),Ukraine,1200.0,
+Graphite (Natural),Vietnam,2000.0,9700000.0
+Gypsum,United States of America,22000000.0,700000000.0
+Gypsum,Algeria,2500000.0,
+Gypsum,Brazil,3600000.0,450000000.0
+Gypsum,Canada,2400000.0,450000000.0
+Gypsum,China,12000000.0,1800000000.0
+Gypsum,France,2400000.0,300000000.0
+Gypsum,Germany,4900000.0,
+Gypsum,India,4300000.0,37000000.0
+Gypsum,Iran,16000000.0,750000000.0
+Gypsum,Japan,4300000.0,
+Gypsum,Mexico,5400000.0,
+Gypsum,Oman,14000000.0,
+Gypsum,Pakistan,2100000.0,760000000.0
+Gypsum,Russia,4100000.0,
+Gypsum,Saudi Arabia,3800000.0,
+Gypsum,Spain,11000000.0,
+Gypsum,Thailand,9800000.0,910000000.0
+Gypsum,Turkey,10000000.0,200000000.0
+Gypsum,Uzbekistan,2000000.0,
+Helium,United States of America,81000000.0,8550000000.0
+Helium,Algeria,11000000.0,1800000000.0
+Helium,Canada,6000000.0,
+Helium,China,3000000.0,
+Helium,Poland,3000000.0,24000000.0
+Helium,Qatar,64000000.0,
+Helium,Russia,17000000.0,1700000000.0
+Indium,Belgium,10.0,
+Indium,Canada,35.0,
+Indium,China,760.0,
+Indium,France,21.0,
+Indium,Japan,60.0,
+Indium,South Korea,180.0,
+Indium,Russia,10.0,
+Indium,Uzbekistan,1.0,
+Iodine,United States of America,,250000.0
+Iodine,Azerbaijan,210.0,170000.0
+Iodine,Chile,22000.0,610000.0
+Iodine,Indonesia,30.0,
+Iodine,Iran,700.0,40000.0
+Iodine,Japan,9300.0,4900000.0
+Iodine,Russia,3.0,120000.0
+Iodine,Turkmenistan,770.0,70000.0
+Pig Iron,United States of America,22000000.0,
+Pig Iron,Brazil,27000000.0,
+Pig Iron,Canada,6000000.0,
+Pig Iron,China,840000000.0,
+Pig Iron,Germany,23000000.0,
+Pig Iron,India,93000000.0,
+Pig Iron,Iran,4000000.0,
+Pig Iron,Italy,3000000.0,
+Pig Iron,Japan,62000000.0,
+Pig Iron,South Korea,44000000.0,
+Pig Iron,Mexico,1000000.0,
+Pig Iron,Russia,54000000.0,
+Pig Iron,Taiwan,12000000.0,
+Pig Iron,Turkey,8000000.0,
+Pig Iron,Ukraine,6000000.0,
+Pig Iron,Vietnam,13000000.0,
+Raw Steel,United States of America,81000000.0,
+Raw Steel,Brazil,34000000.0,
+Raw Steel,Canada,12000000.0,
+Raw Steel,China,990000000.0,
+Raw Steel,Germany,35000000.0,
+Raw Steel,India,150000000.0,
+Raw Steel,Iran,33000000.0,
+Raw Steel,Italy,21000000.0,
+Raw Steel,Japan,85000000.0,
+Raw Steel,South Korea,64000000.0,
+Raw Steel,Mexico,16000000.0,
+Raw Steel,Russia,75000000.0,
+Raw Steel,Taiwan,19000000.0,
+Raw Steel,Turkey,32000000.0,
+Raw Steel,Ukraine,6000000.0,
+Raw Steel,Vietnam,19000000.0,
+Iron Ore,United States of America,48000000.0,3600000000.0
+Iron Ore,Australia,930000000.0,58000000000.0
+Iron Ore,Brazil,440000000.0,34000000000.0
+Iron Ore,Canada,54000000.0,6000000000.0
+Iron Ore,Chile,18000000.0,
+Iron Ore,China,270000000.0,20000000000.0
+Iron Ore,India,270000000.0,5500000000.0
+Iron Ore,Iran,90000000.0,3800000000.0
+Iron Ore,Kazakhstan,30000000.0,2500000000.0
+Iron Ore,Mauritania,15000000.0,
+Iron Ore,Mexico,8000000.0,
+Iron Ore,Peru,21000000.0,2600000000.0
+Iron Ore,Russia,91000000.0,35000000000.0
+Iron Ore,South Africa,66000000.0,930000000.0
+Iron Ore,Sweden,28000000.0,1300000000.0
+Iron Ore,Turkey,18000000.0,150000000.0
+Iron Ore,Ukraine,42000000.0,6500000000.0
+Iron Oxide Pigments,Cyprus,20000.0,
+Iron Oxide Pigments,France,17000.0,
+Iron Oxide Pigments,Germany,250000.0,
+Iron Oxide Pigments,India,3300000.0,37000000.0
+Iron Oxide Pigments,Italy,31000.0,
+Iron Oxide Pigments,Pakistan,100000.0,
+Iron Oxide Pigments,Spain,17000.0,
+Kyanite And Related Minerals,United States of America,80000.0,
+Kyanite And Related Minerals,China,100000.0,5000000.0
+Kyanite And Related Minerals,France,60000.0,
+Kyanite And Related Minerals,India,3600.0,7200000.0
+Kyanite And Related Minerals,Peru,40000.0,
+Kyanite And Related Minerals,South Africa,150000.0,
+Lead,United States of America,300000.0,4600000.0
+Lead,Australia,430000.0,35000000.0
+Lead,Bolivia,60000.0,1600000.0
+Lead,China,1900000.0,22000000.0
+Lead,India,220000.0,1900000.0
+Lead,Iran,60000.0,2000000.0
+Lead,Mexico,180000.0,5600000.0
+Lead,Peru,270000.0,5000000.0
+Lead,Russia,220000.0,8900000.0
+Lead,Sweden,70000.0,1700000.0
+Lead,Tajikistan,40000.0,
+Lead,Turkey,70000.0,1600000.0
+Lime,United States of America,16000000.0,
+Lime,Australia,2000000.0,
+Lime,Belgium,1000000.0,
+Lime,Brazil,8100000.0,
+Lime,Bulgaria,1300000.0,
+Lime,Canada,1900000.0,
+Lime,China,310000000.0,
+Lime,France,3500000.0,
+Lime,Germany,5700000.0,
+Lime,India,17000000.0,
+Lime,Iran,4000000.0,
+Lime,Italy,2400000.0,
+Lime,Japan,6000000.0,
+Lime,South Korea,5100000.0,
+Lime,Malaysia,1500000.0,
+Lime,Poland,1300000.0,
+Lime,Russia,11000000.0,
+Lime,South Africa,1100000.0,
+Lime,Spain,1700000.0,
+Lime,Turkey,4100000.0,
+Lime,Ukraine,1000000.0,
+Lime,United Kingdom,1400000.0,
+Lithium,United States of America,,1800000.0
+Lithium,Argentina,18000.0,4000000.0
+Lithium,Australia,88000.0,7000000.0
+Lithium,Brazil,10000.0,390000.0
+Lithium,Canada,4300.0,1200000.0
+Lithium,Chile,49000.0,9300000.0
+Lithium,China,41000.0,3000000.0
+Lithium,Namibia,2700.0,14000.0
+Lithium,Portugal,380.0,60000.0
+Lithium,Zimbabwe,22000.0,480000.0
+Magnesium Compounds,United States of America,,35000000.0
+Magnesium Compounds,Australia,490000.0,280000000.0
+Magnesium Compounds,Austria,760000.0,49000000.0
+Magnesium Compounds,Brazil,1800000.0,200000000.0
+Magnesium Compounds,Canada,150000.0,
+Magnesium Compounds,China,13000000.0,680000000.0
+Magnesium Compounds,Greece,390000.0,280000000.0
+Magnesium Compounds,India,160000.0,66000000.0
+Magnesium Compounds,Iran,210000.0,10000000.0
+Magnesium Compounds,Russia,2500000.0,2300000000.0
+Magnesium Compounds,Slovakia,380000.0,1200000000.0
+Magnesium Compounds,Spain,670000.0,35000000.0
+Magnesium Compounds,Turkey,1300000.0,110000000.0
+Magnesium Metal,Brazil,20000.0,
+Magnesium Metal,China,950000.0,
+Magnesium Metal,Iran,5000.0,
+Magnesium Metal,Israel,20000.0,
+Magnesium Metal,Kazakhstan,20000.0,
+Magnesium Metal,Russia,15000.0,
+Magnesium Metal,Turkey,15000.0,
+Manganese,Australia,2800000.0,500000000.0
+Manganese,Brazil,590000.0,270000000.0
+Manganese,China,770000.0,280000000.0
+Manganese,Côte d'Ivoire,360000.0,
+Manganese,Gabon,4600000.0,61000000.0
+Manganese,Ghana,820000.0,13000000.0
+Manganese,India,800000.0,34000000.0
+Manganese,Malaysia,410000.0,
+Manganese,South Africa,7400000.0,560000000.0
+Mercury,China,1000.0,
+Mercury,Kyrgyzstan,6.0,
+Mercury,Morocco,2.0,
+Mercury,Norway,20.0,
+Mercury,Peru,30.0,
+Mercury,Tajikistan,100.0,
+Mica (Scrap And Flake),United States of America,23000.0,
+Mica (Scrap And Flake),Canada,12000.0,
+Mica (Scrap And Flake),China,80000.0,
+Mica (Scrap And Flake),Finland,50000.0,
+Mica (Scrap And Flake),France,12000.0,
+Mica (Scrap And Flake),India,13000.0,
+Mica (Scrap And Flake),South Korea,20000.0,
+Mica (Scrap And Flake),Madagascar,85000.0,
+Mica (Scrap And Flake),Spain,9000.0,
+Mica (Scrap And Flake),Turkey,8800.0,
+Molybdenum,United States of America,33000.0,3500000.0
+Molybdenum,Argentina,,100000.0
+Molybdenum,Armenia,8000.0,150000.0
+Molybdenum,Australia,1000.0,690000.0
+Molybdenum,Canada,1200.0,64000.0
+Molybdenum,Chile,38000.0,1400000.0
+Molybdenum,China,110000.0,5900000.0
+Molybdenum,Iran,3000.0,43000.0
+Molybdenum,Kazakhstan,3900.0,7000.0
+Molybdenum,North Korea,700.0,
+Molybdenum,South Korea,300.0,8000.0
+Molybdenum,Mexico,17000.0,130000.0
+Molybdenum,Mongolia,3100.0,10000.0
+Molybdenum,Peru,41000.0,1900000.0
+Molybdenum,Russia,1700.0,1100000.0
+Molybdenum,Uzbekistan,1700.0,21000.0
+Nickel,United States of America,8000.0,310000.0
+Nickel,Australia,110000.0,24000000.0
+Nickel,Brazil,77000.0,16000000.0
+Nickel,Canada,190000.0,2200000.0
+Nickel,China,120000.0,4400000.0
+Nickel,Indonesia,2200000.0,55000000.0
+Nickel,New Caledonia,110000.0,7100000.0
+Nickel,Philippines,330000.0,4800000.0
+Nickel,Russia,210000.0,8300000.0
+Niobium (Columbium),United States of America,,210000.0
+Niobium (Columbium),Brazil,100000.0,16000000.0
+Niobium (Columbium),Canada,7100.0,1600000.0
+Niobium (Columbium),Congo,700.0,
+Niobium (Columbium),Russia,350.0,
+Niobium (Columbium),Rwanda,200.0,
+Nitrogen (Fixed)—Ammonia,United States of America,14000000.0,
+Nitrogen (Fixed)—Ammonia,Algeria,2000000.0,
+Nitrogen (Fixed)—Ammonia,Australia,1300000.0,
+Nitrogen (Fixed)—Ammonia,Canada,3600000.0,
+Nitrogen (Fixed)—Ammonia,China,47000000.0,
+Nitrogen (Fixed)—Ammonia,Egypt,5000000.0,
+Nitrogen (Fixed)—Ammonia,Germany,1700000.0,
+Nitrogen (Fixed)—Ammonia,India,15000000.0,
+Nitrogen (Fixed)—Ammonia,Indonesia,6000000.0,
+Nitrogen (Fixed)—Ammonia,Iran,4200000.0,
+Nitrogen (Fixed)—Ammonia,Malaysia,1400000.0,
+Nitrogen (Fixed)—Ammonia,Netherlands,2000000.0,
+Nitrogen (Fixed)—Ammonia,Nigeria,1700000.0,
+Nitrogen (Fixed)—Ammonia,Oman,2000000.0,
+Nitrogen (Fixed)—Ammonia,Pakistan,3500000.0,
+Nitrogen (Fixed)—Ammonia,Poland,1600000.0,
+Nitrogen (Fixed)—Ammonia,Qatar,3100000.0,
+Nitrogen (Fixed)—Ammonia,Russia,14000000.0,
+Nitrogen (Fixed)—Ammonia,Saudi Arabia,5400000.0,
+Nitrogen (Fixed)—Ammonia,Trinidad and Tobago,3200000.0,
+Nitrogen (Fixed)—Ammonia,Uzbekistan,1300000.0,
+Nitrogen (Fixed)—Ammonia,Vietnam,1400000.0,
+Peat,United States of America,350000.0,150000000.0
+Peat,Belarus,2200000.0,2600000000.0
+Peat,Canada,3000000.0,720000000.0
+Peat,Estonia,1200000.0,570000000.0
+Peat,Finland,3300000.0,6000000000.0
+Peat,Germany,1700000.0,
+Peat,Latvia,2400000.0,150000000.0
+Peat,Lithuania,400000.0,210000000.0
+Peat,Poland,850000.0,
+Peat,Russia,1600000.0,1000000000.0
+Peat,Sweden,2000000.0,
+Peat,Ukraine,440000.0,
+Perlite,United States of America,440000.0,50000000.0
+Perlite,Argentina,30000.0,
+Perlite,Armenia,30000.0,
+Perlite,China,1500000.0,32000000.0
+Perlite,Georgia,40000.0,
+Perlite,Greece,850000.0,180000000.0
+Perlite,Hungary,80000.0,
+Perlite,Mexico,30000.0,
+Perlite,New Zealand,20000.0,
+Perlite,Philippines,20000.0,
+Perlite,Slovakia,40000.0,30000000.0
+Perlite,South Africa,10000.0,
+Perlite,Turkey,1200000.0,
+Phosphate Rock,United States of America,20000000.0,1000000000.0
+Phosphate Rock,Algeria,2000000.0,2200000000.0
+Phosphate Rock,Australia,2500000.0,1100000000.0
+Phosphate Rock,Brazil,5300000.0,1600000000.0
+Phosphate Rock,China,110000000.0,3700000000.0
+Phosphate Rock,Egypt,5000000.0,2800000000.0
+Phosphate Rock,Finland,900000.0,1000000000.0
+Phosphate Rock,India,1600000.0,31000000.0
+Phosphate Rock,Israel,2300000.0,60000000.0
+Phosphate Rock,Jordan,12000000.0,1000000000.0
+Phosphate Rock,Kazakhstan,1700000.0,260000000.0
+Phosphate Rock,Mexico,360000.0,30000000.0
+Phosphate Rock,Morocco,30000000.0,50000000000.0
+Phosphate Rock,Peru,5000000.0,210000000.0
+Phosphate Rock,Russia,14000000.0,2400000000.0
+Phosphate Rock,Saudi Arabia,9500000.0,1000000000.0
+Phosphate Rock,Senegal,2500000.0,50000000.0
+Phosphate Rock,South Africa,2200000.0,1500000000.0
+Phosphate Rock,Syria,2000000.0,250000000.0
+Phosphate Rock,Togo,1500000.0,30000000.0
+Phosphate Rock,Tunisia,3300000.0,2500000000.0
+Phosphate Rock,Turkey,800000.0,71000000.0
+Phosphate Rock,Uzbekistan,900000.0,100000000.0
+Phosphate Rock,Vietnam,2600000.0,30000000.0
+Palladium,United States of America,8.0,
+Palladium,Canada,15.0,
+Palladium,Russia,75.0,
+Palladium,South Africa,72.0,
+Palladium,Zimbabwe,15.0,
+Platinum,United States of America,2.0,
+Platinum,Canada,5.2,
+Platinum,Russia,18.0,
+Platinum,South Africa,120.0,
+Platinum,Zimbabwe,19.0,
+Potash,United States of America,420000.0,220000000.0
+Potash,Belarus,7000000.0,750000000.0
+Potash,Brazil,360000.0,2300000.0
+Potash,Canada,15000000.0,1100000000.0
+Potash,Chile,750000.0,100000000.0
+Potash,China,6300000.0,180000000.0
+Potash,Germany,3000000.0,150000000.0
+Potash,Israel,2400000.0,
+Potash,Jordan,1800000.0,
+Potash,Laos,1500000.0,1000000000.0
+Potash,Russia,9000000.0,920000000.0
+Potash,Spain,400000.0,100000000.0
+Pumice And Pumicite,United States of America,450000.0,
+Pumice And Pumicite,Algeria,900000.0,
+Pumice And Pumicite,Cameroon,280000.0,
+Pumice And Pumicite,Chile,730000.0,
+Pumice And Pumicite,Ecuador,800000.0,
+Pumice And Pumicite,Ethiopia,510000.0,
+Pumice And Pumicite,France,280000.0,
+Pumice And Pumicite,Greece,1000000.0,
+Pumice And Pumicite,Guatemala,570000.0,
+Pumice And Pumicite,Saudi Arabia,980000.0,
+Pumice And Pumicite,Spain,240000.0,
+Pumice And Pumicite,Tanzania,230000.0,
+Pumice And Pumicite,Turkey,8200000.0,
+Pumice And Pumicite,Uganda,830000.0,
+Rare Earths,United States of America,45000.0,1900000.0
+Rare Earths,Australia,13000.0,5700000.0
+Rare Earths,Brazil,20.0,21000000.0
+Rare Earths,Myanmar,31000.0,
+Rare Earths,Canada,,830000.0
+Rare Earths,China,270000.0,44000000.0
+Rare Earths,Greenland,,1500000.0
+Rare Earths,India,2900.0,6900000.0
+Rare Earths,Madagascar,2000.0,
+Rare Earths,Malaysia,130.0,
+Rare Earths,Nigeria,13000.0,
+Rare Earths,Russia,2500.0,3800000.0
+Rare Earths,South Africa,,860000.0
+Rare Earths,Tanzania,,890000.0
+Rare Earths,Thailand,13000.0,4500.0
+Rare Earths,Vietnam,300.0,3500000.0
+Rhenium,United States of America,9.5,400.0
+Rhenium,Armenia,0.2,95.0
+Rhenium,Chile,29.0,1300.0
+Rhenium,China,5.3,19.0
+Rhenium,Kazakhstan,0.5,190.0
+Rhenium,South Korea,3.0,
+Rhenium,Poland,9.4,
+Rhenium,Russia,,310.0
+Rhenium,Uzbekistan,5.0,
+Salt,United States of America,40000000.0,
+Salt,Australia,13000000.0,
+Salt,Belarus,2100000.0,
+Salt,Brazil,6600000.0,
+Salt,Bulgaria,3000000.0,
+Salt,Canada,12000000.0,
+Salt,Chile,11000000.0,
+Salt,China,55000000.0,
+Salt,Egypt,2300000.0,
+Salt,France,5000000.0,
+Salt,Germany,16000000.0,
+Salt,India,28000000.0,
+Salt,Iran,2700000.0,
+Salt,Italy,1900000.0,
+Salt,Mexico,9000000.0,
+Salt,Netherlands,6000000.0,
+Salt,Pakistan,3000000.0,
+Salt,Poland,4600000.0,
+Salt,Russia,8000000.0,
+Salt,Saudi Arabia,2400000.0,
+Salt,Spain,4000000.0,
+Salt,Turkey,9000000.0,
+Salt,United Kingdom,2800000.0,
+Sand And Gravel (Industrial),United States of America,130000000.0,
+Sand And Gravel (Industrial),Argentina,4000000.0,
+Sand And Gravel (Industrial),Australia,5600000.0,
+Sand And Gravel (Industrial),Bulgaria,8200000.0,
+Sand And Gravel (Industrial),Canada,4100000.0,
+Sand And Gravel (Industrial),China,89000000.0,
+Sand And Gravel (Industrial),France,12000000.0,
+Sand And Gravel (Industrial),Germany,11000000.0,
+Sand And Gravel (Industrial),India,12000000.0,
+Sand And Gravel (Industrial),Indonesia,3500000.0,
+Sand And Gravel (Industrial),Italy,33000000.0,
+Sand And Gravel (Industrial),Malaysia,7000000.0,
+Sand And Gravel (Industrial),Mexico,2700000.0,
+Sand And Gravel (Industrial),Netherlands,60000000.0,
+Sand And Gravel (Industrial),Poland,5900000.0,
+Sand And Gravel (Industrial),Russia,7300000.0,
+Sand And Gravel (Industrial),Saudi Arabia,2100000.0,
+Sand And Gravel (Industrial),Spain,6000000.0,
+Sand And Gravel (Industrial),Turkey,13000000.0,
+Sand And Gravel (Industrial),United Kingdom,4900000.0,
+Selenium,United States of America,,10000.0
+Selenium,Belgium,200.0,
+Selenium,Canada,130.0,6500.0
+Selenium,China,1800.0,5000.0
+Selenium,Finland,170.0,300.0
+Selenium,Germany,50.0,
+Selenium,India,14.0,500.0
+Selenium,Japan,710.0,
+Selenium,Peru,50.0,16000.0
+Selenium,Poland,74.0,3000.0
+Selenium,Russia,340.0,26000.0
+Selenium,Serbia,60.0,
+Selenium,South Africa,9.0,
+Selenium,Sweden,,500.0
+Selenium,Turkey,50.0,
+Selenium,Uzbekistan,2.0,
+Ferrosilicon,Bhutan,80000.0,
+Ferrosilicon,Brazil,200000.0,
+Ferrosilicon,Canada,20000.0,
+Ferrosilicon,China,3500000.0,
+Ferrosilicon,France,20000.0,
+Ferrosilicon,Iceland,70000.0,
+Ferrosilicon,India,60000.0,
+Ferrosilicon,Kazakhstan,130000.0,
+Ferrosilicon,Malaysia,130000.0,
+Ferrosilicon,Norway,180000.0,
+Ferrosilicon,Poland,30000.0,
+Ferrosilicon,Russia,470000.0,
+Ferrosilicon,South Africa,40000.0,
+Ferrosilicon,Spain,40000.0,
+Silicon Metal,Australia,40000.0,
+Silicon Metal,Brazil,190000.0,
+Silicon Metal,Canada,30000.0,
+Silicon Metal,China,3900000.0,
+Silicon Metal,France,90000.0,
+Silicon Metal,Germany,60000.0,
+Silicon Metal,Iceland,20000.0,
+Silicon Metal,Kazakhstan,7000.0,
+Silicon Metal,Norway,120000.0,
+Silicon Metal,Russia,50000.0,
+Silicon Metal,South Africa,10000.0,
+Silicon Metal,Spain,5000.0,
+Silver,United States of America,1100.0,23000.0
+Silver,Argentina,800.0,6500.0
+Silver,Australia,1000.0,94000.0
+Silver,Bolivia,1300.0,22000.0
+Silver,Canada,300.0,4900.0
+Silver,Chile,1200.0,26000.0
+Silver,China,3300.0,70000.0
+Silver,India,800.0,8000.0
+Silver,Kazakhstan,1000.0,
+Silver,Mexico,6300.0,37000.0
+Silver,Peru,3100.0,140000.0
+Silver,Poland,1300.0,61000.0
+Silver,Russia,1200.0,92000.0
+Silver,Sweden,400.0,
+Soda Ash,United States of America,12000000.0,23000000000.0
+Soda Ash,Botswana,270000.0,16000000.0
+Soda Ash,Ethiopia,20000.0,400000000.0
+Soda Ash,Kenya,300000.0,7000000.0
+Soda Ash,Turkey,11000000.0,840000000.0
+Strontium,Argentina,700.0,
+Strontium,China,80000.0,12000000.0
+Strontium,Iran,200000.0,7100000.0
+Strontium,Mexico,25000.0,
+Strontium,Spain,200000.0,
+Sulfur,United States of America,8200000.0,
+Sulfur,Australia,900000.0,
+Sulfur,Canada,5000000.0,
+Sulfur,Chile,1300000.0,
+Sulfur,China,19000000.0,
+Sulfur,India,3700000.0,
+Sulfur,Iran,2000000.0,
+Sulfur,Japan,3100000.0,
+Sulfur,Kazakhstan,5100000.0,
+Sulfur,South Korea,3100000.0,
+Sulfur,Kuwait,1300000.0,
+Sulfur,Poland,1100000.0,
+Sulfur,Qatar,3100000.0,
+Sulfur,Russia,7500000.0,
+Sulfur,Saudi Arabia,7500000.0,
+Sulfur,Turkmenistan,900000.0,
+Sulfur,United Arab Emirates,6000000.0,
+Talc And Pyrophyllite,United States of America,530000.0,140000000.0
+Talc And Pyrophyllite,Afghanistan,200000.0,
+Talc And Pyrophyllite,Brazil,480000.0,45000000.0
+Talc And Pyrophyllite,Canada,200000.0,
+Talc And Pyrophyllite,China,1400000.0,60000000.0
+Talc And Pyrophyllite,Finland,200000.0,
+Talc And Pyrophyllite,France,400000.0,
+Talc And Pyrophyllite,India,1400000.0,110000000.0
+Talc And Pyrophyllite,Italy,180000.0,
+Talc And Pyrophyllite,Japan,130000.0,100000000.0
+Talc And Pyrophyllite,South Korea,310000.0,81000000.0
+Talc And Pyrophyllite,Pakistan,200000.0,
+Talc And Pyrophyllite,South Africa,320000.0,
+Talc And Pyrophyllite,Turkey,250000.0,15000000.0
+Tantalum,Australia,52.0,110000.0
+Tantalum,Bolivia,2.0,
+Tantalum,Brazil,210.0,40000.0
+Tantalum,Burundi,2.0,
+Tantalum,China,76.0,240000.0
+Tantalum,Dem. Rep. Congo,880.0,
+Tantalum,Ethiopia,40.0,
+Tantalum,Mozambique,55.0,
+Tantalum,Nigeria,390.0,
+Tantalum,Russia,29.0,
+Tantalum,Rwanda,350.0,
+Tellurium,United States of America,,3800.0
+Tellurium,Bulgaria,1.0,
+Tellurium,Canada,27.0,900.0
+Tellurium,China,750.0,3100.0
+Tellurium,Japan,70.0,
+Tellurium,Russia,70.0,5800.0
+Tellurium,South Africa,4.0,800.0
+Tellurium,Sweden,46.0,740.0
+Tellurium,Uzbekistan,13.0,
+Tin,Australia,9900.0,620000.0
+Tin,Bolivia,21000.0,400000.0
+Tin,Brazil,29000.0,420000.0
+Tin,Myanmar,34000.0,700000.0
+Tin,China,69000.0,1000000.0
+Tin,Dem. Rep. Congo,25000.0,120000.0
+Tin,Indonesia,50000.0,
+Tin,Laos,1500.0,
+Tin,Malaysia,3000.0,
+Tin,Nigeria,7000.0,
+Tin,Peru,31000.0,130000.0
+Tin,Russia,3000.0,460000.0
+Tin,Rwanda,3600.0,
+Tin,Vietnam,6700.0,23000.0
+Titanium Sponge Metal,China,220000.0,
+Titanium Sponge Metal,India,300.0,
+Titanium Sponge Metal,Japan,55000.0,
+Titanium Sponge Metal,Kazakhstan,14000.0,
+Titanium Sponge Metal,Russia,20000.0,
+Titanium Sponge Metal,Saudi Arabia,15000.0,
+Titanium Mineral Concentrates,United States of America,100000.0,2000000.0
+Titanium Mineral Concentrates,Australia,400000.0,180000000.0
+Titanium Mineral Concentrates,Canada,350000.0,51000000.0
+Titanium Mineral Concentrates,China,3300000.0,110000000.0
+Titanium Mineral Concentrates,India,210000.0,15000000.0
+Titanium Mineral Concentrates,Madagascar,240000.0,30000000.0
+Titanium Mineral Concentrates,Mozambique,1900000.0,
+Titanium Mineral Concentrates,Norway,360000.0,37000000.0
+Titanium Mineral Concentrates,Senegal,300000.0,
+Titanium Mineral Concentrates,South Africa,1300000.0,28000000.0
+Titanium Mineral Concentrates,Ukraine,120000.0,5900000.0
+Tungsten,Australia,1000.0,570000.0
+Tungsten,Austria,800.0,10000.0
+Tungsten,Bolivia,1600.0,
+Tungsten,China,67000.0,2400000.0
+Tungsten,North Korea,1700.0,29000.0
+Tungsten,Portugal,500.0,3400.0
+Tungsten,Russia,2000.0,400000.0
+Tungsten,Rwanda,1200.0,
+Tungsten,Spain,700.0,66000.0
+Tungsten,Vietnam,3400.0,140000.0
+Vanadium,United States of America,,45000.0
+Vanadium,Australia,,8500000.0
+Vanadium,Brazil,5000.0,120000.0
+Vanadium,China,70000.0,4100000.0
+Vanadium,Russia,21000.0,5000000.0
+Vanadium,South Africa,8000.0,430000.0
+Vermiculite,United States of America,100000.0,25000000.0
+Vermiculite,Brazil,60000.0,6600000.0
+Vermiculite,Bulgaria,10000.0,
+Vermiculite,China,30000.0,2900000.0
+Vermiculite,India,2000.0,1600000.0
+Vermiculite,Russia,30000.0,
+Vermiculite,South Africa,170000.0,14000000.0
+Vermiculite,Turkey,10000.0,11000000.0
+Vermiculite,Uganda,20000.0,
+Vermiculite,Zimbabwe,30000.0,
+Wollastonite,Canada,20000.0,
+Wollastonite,China,800000.0,
+Wollastonite,Finland,10000.0,
+Wollastonite,India,120000.0,
+Wollastonite,Mexico,95000.0,
+Zeolites (Natural),United States of America,81000.0,
+Zeolites (Natural),Chile,500.0,
+Zeolites (Natural),China,150000.0,
+Zeolites (Natural),Cuba,78000.0,
+Zeolites (Natural),Georgia,5000.0,
+Zeolites (Natural),Hungary,35000.0,
+Zeolites (Natural),Indonesia,120000.0,
+Zeolites (Natural),Jordan,1000.0,
+Zeolites (Natural),South Korea,130000.0,
+Zeolites (Natural),New Zealand,100000.0,
+Zeolites (Natural),Philippines,7100.0,
+Zeolites (Natural),Russia,35000.0,
+Zeolites (Natural),Slovakia,220000.0,
+Zeolites (Natural),Turkey,70000.0,
+Zinc,United States of America,750000.0,9200000.0
+Zinc,Australia,1100000.0,64000000.0
+Zinc,Bolivia,510000.0,
+Zinc,China,4000000.0,46000000.0
+Zinc,India,860000.0,9800000.0
+Zinc,Kazakhstan,370000.0,7600000.0
+Zinc,Mexico,700000.0,14000000.0
+Zinc,Peru,1300000.0,20000000.0
+Zinc,Russia,310000.0,29000000.0
+Zinc,South Africa,120000.0,5900000.0
+Zinc,Sweden,240000.0,3900000.0
+Zirconium And Hafnium,United States of America,100000.0,500000.0
+Zirconium And Hafnium,Australia,500000.0,55000000.0
+Zirconium And Hafnium,China,100000.0,72000.0
+Zirconium And Hafnium,Indonesia,95000.0,
+Zirconium And Hafnium,Kenya,20000.0,5000.0
+Zirconium And Hafnium,Madagascar,30000.0,2100000.0
+Zirconium And Hafnium,Mozambique,160000.0,1500000.0
+Zirconium And Hafnium,Senegal,60000.0,2600000.0
+Zirconium And Hafnium,Sierra Leone,20000.0,290000.0
+Zirconium And Hafnium,South Africa,300000.0,5300000.0
