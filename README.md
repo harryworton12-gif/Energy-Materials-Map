@@ -2,7 +2,7 @@
 
 An interactive world map of where the minerals behind clean energy come from: who mines them, who holds the reserves, and, for the key battery materials, who refines them and where they are shipped.
 
-**[View the live map](https://github.com/harryworton12-gif/Energy-Materials-Map/deployments/github-pages)**
+**[View the live map](https://harryworton12-gif.github.io/Energy-Materials-Map/)**
 
 ## Features
 
